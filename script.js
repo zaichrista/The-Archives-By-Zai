@@ -181,10 +181,12 @@ animateCursor();
 
 document.querySelectorAll("[data-cursor]").forEach(el => {
   el.addEventListener("mouseenter", () => {
+    if (!cursor || !cursorLabel) return;
     cursor.classList.add("active");
     cursorLabel.textContent = el.dataset.cursor;
   });
   el.addEventListener("mouseleave", () => {
+    if (!cursor || !cursorLabel) return;
     cursor.classList.remove("active");
     cursorLabel.textContent = "";
   });
@@ -195,17 +197,17 @@ const loaderMark = document.querySelector(".loader-mark");
 const loader = document.getElementById("loader");
 
 setTimeout(() => {
-  loaderLines[0].classList.remove("active");
-  loaderLines[1].classList.add("active");
+  loaderLines[0]?.classList.remove("active");
+  loaderLines[1]?.classList.add("active");
 }, 1000);
 
 setTimeout(() => {
-  loaderLines[1].classList.remove("active");
-  loaderMark.classList.add("active");
+  loaderLines[1]?.classList.remove("active");
+  loaderMark?.classList.add("active");
 }, 2100);
 
 setTimeout(() => {
-  loader.classList.add("hide");
+  loader?.classList.add("hide");
 }, 3300);
 
 const heroHeading = document.querySelector(".hero h1");
@@ -262,6 +264,12 @@ if (heroHeading) {
 
 const heroSlides = Array.from(document.querySelectorAll(".hero-slide"));
 if (heroSlides.length) {
+  heroSlides.forEach(slide => {
+    const preload = new Image();
+    preload.decoding = "async";
+    preload.src = slide.currentSrc || slide.src;
+  });
+
   const shuffledHeroSlides = [...heroSlides];
   for (let i = shuffledHeroSlides.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -273,6 +281,7 @@ if (heroSlides.length) {
   function showHeroSlide(index) {
     heroSlides.forEach(slide => slide.classList.remove("is-active"));
     const slide = shuffledHeroSlides[index % shuffledHeroSlides.length];
+    if (!slide) return;
     slide.classList.add("is-active");
   }
 
@@ -298,7 +307,7 @@ function renderEvidenceItem(item) {
 
 function openProject(key) {
   const p = projects[key];
-  if (!p) return;
+  if (!p || !panel || !panelContent) return;
   const galleryClass = p.type === "fashion" ? "gallery-slots fashion" : "gallery-slots";
   const requestButton = p.type === "research" ? `<a class="request-btn" href="mailto:info@zairachrista.com?subject=Request full piece: ${encodeURIComponent(p.title)}">Request full piece</a>` : "";
   panelContent.innerHTML = `
@@ -347,6 +356,7 @@ function openProject(key) {
 }
 
 function closeProject() {
+  if (!panel) return;
   panel.classList.remove("open");
   panel.setAttribute("aria-hidden", "true");
   document.body.style.overflow = "";
@@ -356,8 +366,8 @@ document.querySelectorAll("[data-project]").forEach(el => {
   el.addEventListener("click", () => openProject(el.dataset.project));
 });
 
-closeBtn.addEventListener("click", closeProject);
-panel.addEventListener("click", e => {
+closeBtn?.addEventListener("click", closeProject);
+panel?.addEventListener("click", e => {
   if (e.target === panel) closeProject();
 });
 document.addEventListener("keydown", e => {
@@ -460,8 +470,17 @@ function fitFooterWordmark() {
   footerWordmark.style.setProperty("--footer-wordmark-size", `${fittedSize}px`);
 }
 
-window.addEventListener("resize", fitFooterWordmark);
-window.addEventListener("load", fitFooterWordmark);
+let footerWordmarkFrame = null;
+function scheduleFooterWordmarkFit() {
+  if (footerWordmarkFrame) cancelAnimationFrame(footerWordmarkFrame);
+  footerWordmarkFrame = requestAnimationFrame(() => {
+    footerWordmarkFrame = null;
+    fitFooterWordmark();
+  });
+}
+
+window.addEventListener("resize", scheduleFooterWordmarkFit);
+window.addEventListener("load", scheduleFooterWordmarkFit);
 fitFooterWordmark();
 
 
