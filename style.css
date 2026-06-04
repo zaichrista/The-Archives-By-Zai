@@ -507,6 +507,24 @@ h1 {
   letter-spacing: -.09em;
 }
 
+.work-title-logo {
+  line-height: 0;
+}
+
+.work-title-logo img {
+  width: min(100%, 520px);
+  max-height: 96px;
+  object-fit: contain;
+  object-position: left center;
+  display: block;
+  transition: filter .35s var(--ease), transform .35s var(--ease);
+}
+
+.work-line:hover .work-title-logo img {
+  filter: invert(1);
+  transform: translateX(6px);
+}
+
 .work-line p {
   font-family: "IBM Plex Mono", monospace;
   font-size: 13px;
@@ -541,6 +559,29 @@ h1 {
     radial-gradient(circle at 50% 50%, rgba(255,255,255,.15), transparent 35%);
   filter: blur(18px);
   animation: aurora 7s var(--ease) infinite alternate;
+}
+
+.work-thumb img {
+  position: relative;
+  z-index: 1;
+  width: min(96%, 250px);
+  max-height: 112px;
+  object-fit: contain;
+  display: block;
+  transition: filter .35s var(--ease), transform .35s var(--ease);
+}
+
+.work-thumb:has(img) {
+  background: transparent;
+}
+
+.work-thumb:has(img)::before {
+  display: none;
+}
+
+.work-line:hover .work-thumb img {
+  filter: invert(1);
+  transform: scale(1.04);
 }
 
 /* RESEARCH */
