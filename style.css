@@ -592,6 +592,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   border-top: 1px solid rgba(255,255,255,.22);
+  border-left: 1px solid rgba(255,255,255,.22);
 }
 
 .research-grid article {
@@ -692,6 +693,11 @@ h1 {
   place-items: center;
   font-size: 15px;
   line-height: 1;
+  text-decoration: none;
+}
+
+.contact-details a .line-icon {
+  text-decoration: none;
 }
 
 .footer-wordmark {
