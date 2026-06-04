@@ -208,6 +208,81 @@ setTimeout(() => {
   loader.classList.add("hide");
 }, 3300);
 
+const heroHeading = document.querySelector(".hero h1");
+if (heroHeading) {
+  const heroLineElements = Array.from(heroHeading.querySelectorAll("span"));
+  const heroLineText = heroLineElements.map(line => line.textContent.trim());
+  const typeCursor = document.createElement("span");
+  typeCursor.className = "hero-type-cursor";
+  typeCursor.setAttribute("aria-hidden", "true");
+  typeCursor.textContent = "|";
+
+  heroLineElements.forEach(line => {
+    line.textContent = "";
+  });
+  heroLineElements[0]?.appendChild(typeCursor);
+  heroHeading.classList.add("is-typing");
+
+  function renderHeroLine(lineIndex, text) {
+    const line = heroLineElements[lineIndex];
+    if (!line) return;
+    line.textContent = text;
+    line.appendChild(typeCursor);
+  }
+
+  setTimeout(() => {
+    let lineIndex = 0;
+    let charIndex = 0;
+
+    const typeHeroCharacter = () => {
+      if (lineIndex >= heroLineText.length) {
+        heroHeading.classList.remove("is-typing");
+        heroHeading.classList.add("typed-once");
+        return;
+      }
+
+      renderHeroLine(lineIndex, heroLineText[lineIndex].slice(0, charIndex + 1));
+      charIndex += 1;
+
+      if (charIndex >= heroLineText[lineIndex].length) {
+        lineIndex += 1;
+        charIndex = 0;
+        if (lineIndex < heroLineElements.length) {
+          heroLineElements[lineIndex].appendChild(typeCursor);
+        }
+      }
+
+      const nextDelay = lineIndex < heroLineText.length && charIndex === 0 ? 180 : 34;
+      setTimeout(typeHeroCharacter, nextDelay);
+    };
+
+    typeHeroCharacter();
+  }, 3450);
+}
+
+const heroSlides = Array.from(document.querySelectorAll(".hero-slide"));
+if (heroSlides.length) {
+  const shuffledHeroSlides = [...heroSlides];
+  for (let i = shuffledHeroSlides.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledHeroSlides[i], shuffledHeroSlides[j]] = [shuffledHeroSlides[j], shuffledHeroSlides[i]];
+  }
+
+  let heroSlideIndex = 0;
+
+  function showHeroSlide(index) {
+    heroSlides.forEach(slide => slide.classList.remove("is-active"));
+    const slide = shuffledHeroSlides[index % shuffledHeroSlides.length];
+    slide.classList.add("is-active");
+  }
+
+  showHeroSlide(heroSlideIndex);
+  setInterval(() => {
+    heroSlideIndex = (heroSlideIndex + 1) % shuffledHeroSlides.length;
+    showHeroSlide(heroSlideIndex);
+  }, 500);
+}
+
 const panel = document.getElementById("projectPanel");
 const panelContent = document.getElementById("panelContent");
 const closeBtn = document.getElementById("panelClose");
