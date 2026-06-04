@@ -820,6 +820,16 @@ h1 {
   object-position: center top;
 }
 
+.image-slot.preserve-ratio {
+  aspect-ratio: auto;
+  display: block;
+}
+
+.image-slot.preserve-ratio img {
+  height: auto;
+  object-fit: contain;
+}
+
 .gallery-slots.fashion {
   grid-template-columns: repeat(4, 1fr);
 }

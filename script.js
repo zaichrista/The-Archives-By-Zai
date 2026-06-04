@@ -43,7 +43,11 @@ const projects = {
     abstract: "Baba G explored how a genuine Lebanese street-food business could translate warmth, appetite and personality into a sharper visual identity without losing its neighbourhood charm.",
     investigation: "The existing brand was functional but forgettable. My proposal moved the identity toward kraft gold, terracotta, stamped packaging cues and a heavier wordmark that could hold signage, paper bags and street-food energy. The project became a study in making the distance between current brand and possible brand legible.",
     learned: "Baba G taught me that brand strategy often means helping people see what their own business could become before they are ready to become it.",
-    evidence: ["New logo proposal", "Existing site comparison", "Paper bag mockup", "Signage mockup", "Colour palette", "Wordmark detail", "Packaging system", "Menu treatment", "Before / after"]
+    evidence: [
+      { src: "assets/Baba%20G/Bag.png", alt: "Baba G branded paper bag mockup", preserveRatio: true },
+      { src: "assets/Baba%20G/Wrap%20sleeve.png", alt: "Baba G wrap sleeve packaging mockup", preserveRatio: true },
+      { src: "assets/Baba%20G/image.png", alt: "Baba G brand refresh visual", preserveRatio: true }
+    ]
   },
   "parikyo": {
     title: "Kisses from Parikyo",
@@ -54,7 +58,12 @@ const projects = {
     abstract: "Parikyo is a speculative fashion collection built from Paris and Tokyo as design philosophies. The emphasis is on clothing, silhouette and cultural translation, with concept used as the structure beneath the looks.",
     investigation: "The four looks translate Schiaparelli, Japanese denim, Dior draping, cargo silhouettes, Chanel, steampunk, qipao structure and Hokusai movement into silhouettes. These are AI-rendered concept looks. The direction, research and creative decisions are my own. The work is not pastiche. It is translation.",
     learned: "Kisses from Parikyo taught me that cultural reference becomes strongest when it stops decorating the garment and starts shaping the garment.",
-    evidence: ["Look 01 full render", "Look 02 full render", "Look 03 full render", "Look 04 full render", "Fabric references", "Silhouette study", "Cultural reference map", "Colour story"]
+    evidence: [
+      { src: "assets/Kisses%20from%20Paikyo%20-%20001/Look%201.png", alt: "Kisses from Parikyo look 1 full render", preserveRatio: true },
+      { src: "assets/Kisses%20from%20Paikyo%20-%20001/Look%202.png", alt: "Kisses from Parikyo look 2 full render", preserveRatio: true },
+      { src: "assets/Kisses%20from%20Paikyo%20-%20001/Look%203.png", alt: "Kisses from Parikyo look 3 full render", preserveRatio: true },
+      { src: "assets/Kisses%20from%20Paikyo%20-%20001/Look%204.png", alt: "Kisses from Parikyo look 4 full render", preserveRatio: true }
+    ]
   },
   "fw23": {
     title: "FW23 — Women, Studied",
@@ -205,7 +214,8 @@ const closeBtn = document.getElementById("panelClose");
 
 function renderEvidenceItem(item) {
   if (item && typeof item === "object" && item.src) {
-    return `<figure class="slot image-slot"><img src="${item.src}" alt="${item.alt || ""}" loading="lazy"></figure>`;
+    const ratioClass = item.preserveRatio ? " preserve-ratio" : "";
+    return `<figure class="slot image-slot${ratioClass}"><img src="${item.src}" alt="${item.alt || ""}" loading="lazy"></figure>`;
   }
 
   return `<div class="slot">${item}</div>`;
