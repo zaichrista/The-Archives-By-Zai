@@ -218,14 +218,13 @@ function openProject(key) {
   const requestButton = p.type === "research" ? `<a class="request-btn" href="mailto:info@zairachrista.com?subject=Request full piece: ${encodeURIComponent(p.title)}">Request full piece</a>` : "";
   panelContent.innerHTML = `
     <article class="project-room ${p.type}">
-      <div class="${p.type === "research" ? "project-hero-grid no-visual" : "project-hero-grid"}">
+      <div class="project-hero-grid no-visual">
         <div>
           <p class="meta">${p.meta}</p>
           <h2>${p.title}</h2>
           <p class="lead">${p.lead}</p>
           ${requestButton}
         </div>
-        ${p.type === "research" ? "" : `<div class="project-visual" aria-label="${p.title} visual placeholder"></div>`}
       </div>
 
       <section class="project-section">
