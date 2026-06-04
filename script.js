@@ -435,6 +435,35 @@ window.addEventListener("scroll", updateBioQuestionMode, { passive: true });
 window.addEventListener("resize", updateBioQuestionMode);
 updateBioQuestionMode();
 
+const footerWordmark = document.querySelector(".footer-wordmark");
+function fitFooterWordmark() {
+  if (!footerWordmark) return;
+
+  const availableWidth = window.innerWidth - (window.innerWidth <= 760 ? 18 : 24);
+  const probe = footerWordmark.cloneNode(true);
+  probe.style.position = "fixed";
+  probe.style.left = "-9999px";
+  probe.style.top = "0";
+  probe.style.width = "auto";
+  probe.style.padding = "0";
+  probe.style.margin = "0";
+  probe.style.transform = "none";
+  probe.style.fontSize = "100px";
+  probe.style.visibility = "hidden";
+  probe.style.whiteSpace = "nowrap";
+  document.body.appendChild(probe);
+
+  const measuredWidth = probe.getBoundingClientRect().width || 1;
+  document.body.removeChild(probe);
+
+  const fittedSize = Math.max(58, Math.min(900, (availableWidth / measuredWidth) * 100));
+  footerWordmark.style.setProperty("--footer-wordmark-size", `${fittedSize}px`);
+}
+
+window.addEventListener("resize", fitFooterWordmark);
+window.addEventListener("load", fitFooterWordmark);
+fitFooterWordmark();
+
 
 // V16: section entrance choreography
 const currentSection = document.querySelector(".swiss-current");
