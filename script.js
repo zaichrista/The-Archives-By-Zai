@@ -76,7 +76,20 @@ const projects = {
     abstract: "SS24 is a fashion direction project about glamour as desire, power, spectacle and exclusion. It is more image-led than theory-led, but the argument lives inside the clothing.",
     investigation: "Where FW23 studied, SS24 performed. The collection drew on mid-century glamour and destabilised it with materials and silhouettes that introduced friction. Glamour has always been a negotiation between desire and power, visibility and control.",
     learned: "SS24 taught me that glamour survives because contradiction survives. It seduces and restricts at the same time.",
-    evidence: ["Runway shot 01", "Runway shot 02", "Runway shot 03", "Runway shot 04", "Detail image", "Backstage", "Moodboard", "Look note"]
+    evidence: [
+      { src: "assets/ss24/ss24-01.jpg", alt: "SS24 runway look with black ruffled sheer detailing" },
+      { src: "assets/ss24/ss24-02.jpg", alt: "SS24 runway look with pink satin dress" },
+      { src: "assets/ss24/ss24-03.jpg", alt: "SS24 runway look with black satin and sheer polka-dot dress" },
+      { src: "assets/ss24/ss24-04.jpg", alt: "SS24 runway look with black one-shoulder ruffle dress" },
+      { src: "assets/ss24/ss24-05.jpg", alt: "SS24 runway look with black cross-strap gown" },
+      { src: "assets/ss24/ss24-06.jpg", alt: "SS24 runway look with black and blue fringed skirt" },
+      { src: "assets/ss24/ss24-07.jpg", alt: "SS24 runway look with yellow satin gown" },
+      { src: "assets/ss24/ss24-08.jpg", alt: "SS24 runway look with black structured gathered dress" },
+      { src: "assets/ss24/ss24-09.jpg", alt: "SS24 runway look with black sequined gown" },
+      { src: "assets/ss24/ss24-10.jpg", alt: "SS24 runway look with pale blue beaded gown" },
+      { src: "assets/ss24/ss24-11.jpg", alt: "SS24 runway look with emerald one-shoulder gown" },
+      { src: "assets/ss24/ss24-12.jpg", alt: "SS24 runway look with black satin gown and yellow lining" }
+    ]
   },
   "voyage-ascent": {
     title: "A Voyage in Ascent",
@@ -190,6 +203,14 @@ const panel = document.getElementById("projectPanel");
 const panelContent = document.getElementById("panelContent");
 const closeBtn = document.getElementById("panelClose");
 
+function renderEvidenceItem(item) {
+  if (item && typeof item === "object" && item.src) {
+    return `<figure class="slot image-slot"><img src="${item.src}" alt="${item.alt || ""}" loading="lazy"></figure>`;
+  }
+
+  return `<div class="slot">${item}</div>`;
+}
+
 function openProject(key) {
   const p = projects[key];
   if (!p) return;
@@ -226,7 +247,7 @@ function openProject(key) {
         <p class="meta">${p.type === "fashion" ? "Look / Image Slots" : "Evidence Slots"}</p>
         <h3>${p.type === "fashion" ? "The clothing carries the argument." : "Replace these with the real work."}</h3>
         <div class="${galleryClass}">
-          ${p.evidence.map(item => `<div class="slot">${item}</div>`).join("")}
+          ${p.evidence.map(renderEvidenceItem).join("")}
         </div>
       </section>`}
 
