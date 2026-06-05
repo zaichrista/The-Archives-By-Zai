@@ -2568,6 +2568,14 @@ h1 {
     white-space: normal !important;
   }
 
+  .hero h1.typed-once span:first-child::after {
+    content: "\00a0";
+  }
+
+  .hero h1.typed-once span:nth-child(2)::after {
+    content: " ";
+  }
+
   .hero .intro {
     max-width: none !important;
     margin-top: 28px !important;
