@@ -514,7 +514,8 @@ function updateBioQuestionMode() {
 
   if (isSmallScreen && bioQuestionLock) {
     const questionRect = bioQuestionLock.getBoundingClientRect();
-    const shouldLockQuestion = questionRect.top <= viewport * 0.52 && rect.bottom > viewport * 0.22;
+    const questionCenter = questionRect.top + questionRect.height / 2;
+    const shouldLockQuestion = questionCenter <= viewport * 0.50 && rect.bottom > viewport * 0.22;
     cleanBioSection.classList.toggle("question-mode", shouldLockQuestion);
     return;
   }
