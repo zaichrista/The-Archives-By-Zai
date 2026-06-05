@@ -21,6 +21,7 @@ const projects = {
     abstract: "Bekaa is a hospitality innovation strategy responding to the flattening of London’s nightlife. Contemporary bars are increasingly shaped by aesthetic repetition, social media sameness, and commercially standardised atmospheres that photograph well but rarely stay with you. Bekaa proposes a different model: a Mediterranean-informed listening bar, cocktail space, and cultural venue where music, drink, visual art, and communal ritual are experienced together.<br><br>Inspired by Lebanon’s Bekaa Valley, the project treats hospitality as cultural infrastructure. At its centre is my concept of archival capital: the value gained through the accumulation of visible and affective traces over time. A venue becomes meaningful not through instant spectacle, but through returning customers, worn surfaces, remembered songs, repeated rituals, and the emotional attachment people form with a place.",
     investigation: "The project began with a problem in London’s nightlife: too many spaces feel interchangeable, driven by visual marketability rather than cultural depth. A visit to Bar Ideal in Athens became a key reference point, revealing how music could connect a room rather than simply decorate it. From this, Bekaa developed into a music-first hospitality concept built around slowness, intimacy, and shared presence.<br><br>The strategy positioned Bekaa in South Kensington, an area rich in cultural institutions but lacking a strong nightlife identity. Its proximity to the V&A, Royal College of Art, Royal College of Music, Royal Albert Hall, Chelsea, and Notting Hill made it an ideal site for a venue aimed at culturally literate Londoners, artists, students, young professionals, and international residents.<br><br>The investigation combined market analysis, competitor research, brand positioning, financial planning, and operational strategy. Bekaa was differentiated from cocktail bars, listening bars, members’ clubs, gallery cafés, and cultural venues by treating music, art, mixology, and communal ritual as equals. The marketing strategy was built around calibrated revelation: revealing enough to create intrigue, but withholding enough to preserve mystery.",
     learned: "Through Bekaa, I learned that hospitality is not only about service, drinks, or interiors. It is about orchestrating emotional conditions. A strong venue gives people a rhythm, a corner, a sound, a ritual, and a reason to return.<br><br>I also learned how to turn theory into a business model. Archival capital became a way to think about customer retention, cultural authority, programming, brand loyalty, and the emotional ageing of space. The archive stopped being static and became commercial, sensory, and alive.<br><br>Most importantly, Bekaa taught me that innovation can be quiet. In a market obsessed with speed and visibility, slowness can become strategy. A bar can become a listening room. A cocktail can become a ritual. A venue can become powerful when it is remembered before it is explained.",
+    evidenceComingSoon: true,
     evidence: ["Logo on dark background", "Mission / Vision / Values slide", "Competitor analysis table", "Audience profile", "Interior moodboard", "Music programme", "Cocktail ritual", "Spatial plan", "Archival capital diagram"]
   },
   "muni": {
@@ -32,6 +33,7 @@ const projects = {
     abstract: "Muni is a modular clothing brand built around the belief that sustainability should not feel like restriction. Rather than approaching sustainable fashion through sacrifice, guilt, or upcycling alone, Muni proposes a usable capsule wardrobe with infinite possibilities, where the wearer becomes the designer.<br><br>The project responds to the fatigue surrounding sustainable fashion. Too often, sustainability is framed through absence: buy less, want less, desire less. Muni moves in the opposite direction, bringing pleasure, play, and authorship back into conscious dressing. Through detachable and interchangeable garments, clothing becomes a living system rather than a finished object.",
     investigation: "The investigation began with a frustration: sustainable fashion often feels visually tired. I wanted to imagine a wardrobe that was responsible without being emotionally flat. Instead of focusing only on reducing waste, Muni explored how clothes could extend attachment by giving the wearer more agency.<br><br>The capsule wardrobe became the project’s foundation, but I reinterpreted it as something flexible rather than fixed. Pieces could be attached, removed, layered, reversed, extended, or stripped back. The wearer would not simply style the garment; they would intervene in it.<br><br>The project also explored the aesthetics of utility. Modularity can easily become overly technical, so the challenge was to make function feel beautiful. Muni treats adaptability as a design language: practical, intimate, and alive.",
     learned: "Through Muni, I learned that sustainability becomes more powerful when it is tied to desire. People do not only keep clothes because they are ethical; they keep clothes because they continue to offer possibility.<br><br>I also learned that the wearer is an underused creative force. Fashion often speaks about individuality, but still gives the wearer a finished object. Muni gave me a different model: the designer provides the grammar, but the wearer writes the sentence.<br><br>Most importantly, Muni taught me that sustainability does not have to be aesthetically quiet. It can be playful, modular, sensual, and abundant without becoming wasteful.",
+    evidenceComingSoon: true,
     evidence: ["Amber gradient logo", "Logo development", "Zipper system diagram", "Component map", "Garment construction", "Packaging concept", "User journey", "Brand world", "Kisses from Parikyo connection"]
   },
   "baba-g": {
@@ -74,7 +76,29 @@ const projects = {
     abstract: "Women, Studied was my first full runway collection and the first project in which I understood clothing as evidence. The collection investigates the politics of looking, being looked at, and concealment, treating the dressed body as both subject and archive.<br><br>Inspired by Venus and my mother, the work explores femininity as something observed, mythologised, protected, exposed, inherited, and performed. The title carries a double meaning: women as objects of study, and women as the ones studying the room back.",
     investigation: "The investigation began with Venus, not simply as an icon of beauty, but as a figure trapped inside centuries of looking. She is adored, painted, sculpted, repeated, and consumed. She is powerful because she is beautiful, yet vulnerable because beauty makes her visible.<br><br>The second source was my mother. Where Venus brought mythology, my mother brought intimacy. The collection became a dialogue between inherited femininity and constructed femininity, between the woman as image and the woman as origin.<br><br>As the first full runway show I designed and directed, the project required creative authorship across garments, casting, styling, pacing, atmosphere, and presentation. The clothing explored concealment as an active visual language. To cover the body is not always to hide it. Sometimes what is withheld becomes louder than what is revealed.",
     learned: "Through Women, Studied, I learned that fashion can think. Clothing can carry an argument without needing to explain itself verbally. A seam, veil, cut, neckline, or silhouette can ask a question about power as clearly as a sentence can.<br><br>I also learned what it means to direct a full fashion world. A runway show is not simply a sequence of clothes; it is a controlled encounter between bodies and spectators.<br><br>Most importantly, the project taught me that femininity is not passive material. It is studied because it is powerful. It is concealed because it is watched. It is inherited because it survives.",
-    evidence: ["Runway shot 01", "Runway shot 02", "Runway shot 03", "Runway shot 04", "Backstage", "Look detail", "Sketch", "Show notes"]
+    evidence: [
+      { src: "assets/FIRST%20COLLECTION/IMG_0211.JPG", alt: "FW23 Women, Studied look 1", preserveRatio: true },
+      { src: "assets/FIRST%20COLLECTION/IMG_0212.JPG", alt: "FW23 Women, Studied look 2", preserveRatio: true },
+      { src: "assets/FIRST%20COLLECTION/IMG_0213.JPG", alt: "FW23 Women, Studied look 3", preserveRatio: true },
+      { src: "assets/FIRST%20COLLECTION/IMG_0214.jpg", alt: "FW23 Women, Studied look 4", preserveRatio: true },
+      { src: "assets/FIRST%20COLLECTION/IMG_0215.JPG", alt: "FW23 Women, Studied look 5", preserveRatio: true },
+      { src: "assets/FIRST%20COLLECTION/IMG_0216.JPG", alt: "FW23 Women, Studied look 6", preserveRatio: true },
+      { src: "assets/FIRST%20COLLECTION/IMG_0217.jpg", alt: "FW23 Women, Studied look 7", preserveRatio: true },
+      { src: "assets/FIRST%20COLLECTION/IMG_0218.JPG", alt: "FW23 Women, Studied look 8", preserveRatio: true },
+      { src: "assets/FIRST%20COLLECTION/IMG_0219.JPG", alt: "FW23 Women, Studied look 9", preserveRatio: true },
+      { src: "assets/FIRST%20COLLECTION/IMG_0220.JPG", alt: "FW23 Women, Studied look 10", preserveRatio: true },
+      { src: "assets/FIRST%20COLLECTION/IMG_0221.JPG", alt: "FW23 Women, Studied look 11", preserveRatio: true },
+      { src: "assets/FIRST%20COLLECTION/IMG_0222.JPG", alt: "FW23 Women, Studied look 12", preserveRatio: true },
+      { src: "assets/FIRST%20COLLECTION/IMG_0223.JPG", alt: "FW23 Women, Studied look 13", preserveRatio: true },
+      { src: "assets/FIRST%20COLLECTION/IMG_0224.JPG", alt: "FW23 Women, Studied look 14", preserveRatio: true },
+      { src: "assets/FIRST%20COLLECTION/IMG_0225.JPG", alt: "FW23 Women, Studied look 15", preserveRatio: true },
+      { src: "assets/FIRST%20COLLECTION/IMG_0226.JPG", alt: "FW23 Women, Studied look 16", preserveRatio: true },
+      { src: "assets/FIRST%20COLLECTION/IMG_0227.JPG", alt: "FW23 Women, Studied look 17", preserveRatio: true },
+      { src: "assets/FIRST%20COLLECTION/IMG_0228%202.JPG", alt: "FW23 Women, Studied look 18", preserveRatio: true },
+      { src: "assets/FIRST%20COLLECTION/IMG_0229.JPG", alt: "FW23 Women, Studied look 19", preserveRatio: true },
+      { src: "assets/FIRST%20COLLECTION/IMG_0230.JPG", alt: "FW23 Women, Studied look 20", preserveRatio: true },
+      { src: "assets/FIRST%20COLLECTION/IMG_0231.JPG", alt: "FW23 Women, Studied look 21", preserveRatio: true }
+    ]
   },
   "ss24": {
     title: "SS24 — Reflections on Glamour",
@@ -340,10 +364,10 @@ function openProject(key) {
       </section>
 
       ${p.type === "research" ? "" : `<section class="project-section">
-        <p class="meta">${p.type === "fashion" ? "The looks" : "The evidence"}</p>
-        <div class="${galleryClass}">
+        <p class="meta">${p.evidenceComingSoon ? "The evidence (coming soon)" : p.type === "fashion" ? "The looks" : "The evidence"}</p>
+        ${p.evidenceComingSoon ? "" : `<div class="${galleryClass}">
           ${p.evidence.map(renderEvidenceItem).join("")}
-        </div>
+        </div>`}
       </section>`}
 
       <section class="project-section">
