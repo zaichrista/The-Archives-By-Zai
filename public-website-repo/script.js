@@ -505,10 +505,20 @@ window.addEventListener("resize", hideDefinitionTooltip);
 // Scroll-triggered bio transformation:
 // as the bio section passes, all text fades except the central question in gold.
 const cleanBioSection = document.querySelector(".clean-bio");
+const bioQuestionLock = document.querySelector(".bio-question-lock");
 function updateBioQuestionMode() {
   if (!cleanBioSection) return;
   const rect = cleanBioSection.getBoundingClientRect();
   const viewport = window.innerHeight || document.documentElement.clientHeight;
+  const isSmallScreen = window.matchMedia("(max-width: 760px)").matches;
+
+  if (isSmallScreen && bioQuestionLock) {
+    const questionRect = bioQuestionLock.getBoundingClientRect();
+    const questionCenter = questionRect.top + questionRect.height / 2;
+    const shouldLockQuestion = questionCenter <= viewport * 0.50 && rect.bottom > viewport * 0.22;
+    cleanBioSection.classList.toggle("question-mode", shouldLockQuestion);
+    return;
+  }
 
   // Turn on after the reader has moved through the bio, but before leaving it completely.
   const shouldLockQuestion = rect.top < viewport * -0.10 && rect.bottom > viewport * 0.30;

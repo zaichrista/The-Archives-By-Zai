@@ -2568,6 +2568,14 @@ h1 {
     white-space: normal !important;
   }
 
+  .hero h1.typed-once span:first-child::after {
+    content: "\00a0";
+  }
+
+  .hero h1.typed-once span:nth-child(2)::after {
+    content: " ";
+  }
+
   .hero .intro {
     max-width: none !important;
     margin-top: 28px !important;
@@ -2623,6 +2631,21 @@ h1 {
     padding-left: 0 !important;
     background: transparent !important;
     color: inherit !important;
+  }
+
+  .work-line:hover h3,
+  .work-line:hover .work-number {
+    color: inherit !important;
+  }
+
+  .work-line:hover p {
+    color: var(--muted) !important;
+  }
+
+  .work-line:hover .work-title-logo img,
+  .work-line:hover .work-thumb img {
+    filter: none !important;
+    transform: none !important;
   }
 
   .work-number {

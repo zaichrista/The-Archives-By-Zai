@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zaichrista.github.io/The-Archives-By-Zai/sitemap.xml
