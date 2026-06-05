@@ -1859,6 +1859,40 @@ h1 {
   .clean-bio-text.definition-bio {
     font-size: clamp(36px, 10.4vw, 62px) !important;
   }
+
+  .def-term {
+    cursor: pointer;
+  }
+
+  .definition-tooltip {
+    width: min(280px, calc(100vw - 20px)) !important;
+    max-height: min(56vh, 360px) !important;
+    overflow-y: auto !important;
+    padding: 16px 18px 18px !important;
+    box-shadow: 0 12px 28px rgba(0,0,0,.18) !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .definition-tooltip h4 {
+    font-size: 34px !important;
+    line-height: .88 !important;
+    letter-spacing: -.04em !important;
+  }
+
+  .definition-tooltip .pron {
+    margin: 7px 0 10px !important;
+    font-size: 16px !important;
+    line-height: 1.15 !important;
+  }
+
+  .definition-tooltip .rule {
+    margin-bottom: 12px !important;
+  }
+
+  .definition-tooltip p:last-child {
+    font-size: 11px !important;
+    line-height: 1.42 !important;
+  }
 }
 
 
@@ -2477,9 +2511,18 @@ h1 {
 
   .hero h1 {
     width: 100% !important;
-    font-size: clamp(42px, 13vw, 58px) !important;
-    line-height: .88 !important;
-    letter-spacing: -.08em !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+    font-size: clamp(36px, 11vw, 48px) !important;
+    line-height: .96 !important;
+    letter-spacing: -.06em !important;
+    white-space: normal !important;
+    word-break: normal !important;
+  }
+
+  .hero h1 span {
+    display: inline !important;
+    white-space: normal !important;
   }
 
   .hero .intro {
@@ -2585,6 +2628,13 @@ h1 {
     gap: 28px !important;
   }
 
+  .contact h2 {
+    font-size: clamp(46px, 14vw, 64px) !important;
+    line-height: .92 !important;
+    letter-spacing: -.07em !important;
+    overflow-wrap: anywhere !important;
+  }
+
   .contact-details {
     align-items: flex-start !important;
   }
@@ -2595,10 +2645,7 @@ h1 {
   }
 
   .footer-wordmark {
-    font-size: clamp(54px, 20vw, 88px) !important;
-    letter-spacing: -.1em !important;
-    white-space: normal !important;
-    line-height: .82 !important;
+    display: none !important;
   }
 
   .panel-close {

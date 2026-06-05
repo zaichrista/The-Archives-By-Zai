@@ -420,38 +420,83 @@ document.querySelectorAll(".bio-text p").forEach(p => {
 });
 
 
-// Definition-card hover tooltips for the bio section
+// Definition-card hover/tap tooltips for the bio section
 const definitionTooltip = document.getElementById("definitionTooltip");
+let activeDefinitionTerm = null;
+
+function hideDefinitionTooltip() {
+  if (!definitionTooltip) return;
+  activeDefinitionTerm = null;
+  definitionTooltip.classList.remove("show");
+  definitionTooltip.setAttribute("aria-hidden", "true");
+}
+
+function positionDefinitionTooltip(clientX, clientY) {
+  if (!definitionTooltip) return;
+  const isSmallScreen = window.matchMedia("(max-width: 760px)").matches;
+  const gap = isSmallScreen ? 10 : 22;
+  const edge = isSmallScreen ? 10 : 16;
+  const rect = definitionTooltip.getBoundingClientRect();
+  let x = clientX + gap;
+  let y = clientY + gap;
+
+  if (isSmallScreen) {
+    x = Math.min(Math.max(edge, x), window.innerWidth - rect.width - edge);
+    y = Math.min(Math.max(edge, y), window.innerHeight - rect.height - edge);
+  } else {
+    if (x + rect.width > window.innerWidth - edge) x = clientX - rect.width - gap;
+    if (y + rect.height > window.innerHeight - edge) y = clientY - rect.height - gap;
+  }
+
+  definitionTooltip.style.left = x + "px";
+  definitionTooltip.style.top = y + "px";
+}
+
+function showDefinitionTooltip(term, clientX, clientY) {
+  if (!definitionTooltip) return;
+  activeDefinitionTerm = term;
+  definitionTooltip.innerHTML = `
+    <h4>${term.dataset.title}</h4>
+    <p class="pron">${term.dataset.pron}</p>
+    <div class="rule"></div>
+    <p>${term.dataset.def}</p>
+  `;
+  definitionTooltip.classList.add("show");
+  definitionTooltip.setAttribute("aria-hidden", "false");
+  positionDefinitionTooltip(clientX, clientY);
+}
+
 document.querySelectorAll(".def-term").forEach(term => {
-  term.addEventListener("mouseenter", () => {
-    if (!definitionTooltip) return;
-    definitionTooltip.innerHTML = `
-      <h4>${term.dataset.title}</h4>
-      <p class="pron">${term.dataset.pron}</p>
-      <div class="rule"></div>
-      <p>${term.dataset.def}</p>
-    `;
-    definitionTooltip.classList.add("show");
-    definitionTooltip.setAttribute("aria-hidden", "false");
+  term.addEventListener("mouseenter", (e) => {
+    if (window.matchMedia("(hover: none)").matches) return;
+    showDefinitionTooltip(term, e.clientX, e.clientY);
   });
   term.addEventListener("mousemove", (e) => {
-    if (!definitionTooltip) return;
-    const pad = 22;
-    const rect = definitionTooltip.getBoundingClientRect();
-    let x = e.clientX + pad;
-    let y = e.clientY + pad;
-    if (x + rect.width > window.innerWidth - 16) x = e.clientX - rect.width - pad;
-    if (y + rect.height > window.innerHeight - 16) y = e.clientY - rect.height - pad;
-    definitionTooltip.style.left = x + "px";
-    definitionTooltip.style.top = y + "px";
+    if (window.matchMedia("(hover: none)").matches) return;
+    positionDefinitionTooltip(e.clientX, e.clientY);
   });
   term.addEventListener("mouseleave", () => {
-    if (!definitionTooltip) return;
-    definitionTooltip.classList.remove("show");
-    definitionTooltip.setAttribute("aria-hidden", "true");
+    if (window.matchMedia("(hover: none)").matches) return;
+    hideDefinitionTooltip();
+  });
+  term.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (activeDefinitionTerm === term && definitionTooltip?.classList.contains("show")) {
+      hideDefinitionTooltip();
+      return;
+    }
+    showDefinitionTooltip(term, e.clientX, e.clientY);
   });
 });
 
+document.addEventListener("click", (e) => {
+  if (!definitionTooltip?.classList.contains("show")) return;
+  if (e.target.closest(".def-term") || e.target.closest("#definitionTooltip")) return;
+  hideDefinitionTooltip();
+});
+
+window.addEventListener("scroll", hideDefinitionTooltip, { passive: true });
+window.addEventListener("resize", hideDefinitionTooltip);
 
 // Scroll-triggered bio transformation:
 // as the bio section passes, all text fades except the central question in gold.
