@@ -2375,11 +2375,3 @@ h1 {
 .work-index .work-line[hidden] {
   display: none !important;
 }
-
-.work-index .work-line {
-  grid-template-columns: 70px 1fr !important;
-}
-
-.work-index .work-thumb {
-  display: none !important;
-}
