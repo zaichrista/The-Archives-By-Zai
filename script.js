@@ -117,9 +117,9 @@ const projects = {
     meta: "Ethnography · Oxford BA Dissertation · 2025",
     lead: "Three weeks of fieldwork in Tokyo's underground club scene: clubs, conversations and one dinner table with a hip hop legend.",
     question: "How does a city write itself onto the body?",
-    abstract: "This dissertation examines Tokyo’s underground club scene as a performative archive of resistance. Through fieldwork in Shibuya and Shimokitazawa, it studies how fashion, music and movement operate as subcultural graffiti.",
-    investigation: "I spent three weeks in Shibuya and Shimokitazawa visiting eight clubs, conducting four formal interviews and twelve informal conversations with DJs, producers, fashion designers and club owners. The most significant conversation was with Dabo, one of the founding figures of Japanese hip hop, at a dinner table with Sade playing in the background.",
-    learned: "Tokyo Drift taught me that culture survives through traces: clothing, sound, movement, participation and memory.",
+    abstract: "Tokyo Drift is a substantial ethnographic study of Tokyo’s underground hip hop and clubbing culture, developed through fieldwork in Shibuya and Shimokitazawa. The project asks how a musical culture rooted in African American struggle, resistance, and expressive freedom became embedded within Tokyo’s nightlife, fashion, and subcultural identity.<br><br>At the centre of the project is a theory of the body as a graffitied wall: a living surface marked by music, clothing, gesture, memory, and affective exchange. Tokyo’s underground becomes a wall in motion, rewritten nightly through basslines, silhouettes, dance, language, and atmosphere.",
+    investigation: "The project was built through three weeks of qualitative fieldwork in Tokyo, including club visits, participant observation, formal and semi-structured interviews, informal conversations, fieldnotes, voice memos, and reflective journalling.<br><br>The research focused on Shibuya and Shimokitazawa, with interviews and encounters involving DJs, rappers, producers, designers, and club owners. Figures such as Dabo, Coma-Chi, YESBØWY, Shing02, and Robin Rastenberger offered different entry points into Tokyo’s underground: rap history, DJ practice, fashion design, club architecture, artistic identity, and the politics of belonging.<br><br>The theoretical framework combines sensory ethnography, graffiti theory, affect theory, embodiment, and subcultural capital. Schacter’s theory of graffiti as ornament became the project’s conceptual spine, allowing the club to be read as a canvas and the body as a social artefact of inscription.",
+    learned: "Tokyo Drift reveals that Tokyo’s underground club culture is not simply an imported version of American hip hop. It is a living, localised, and constantly rewritten archive of identity.<br><br>The body operates as a cultural surface, tagged by clothes, music, language, race, gender, memory, nostalgia, club architecture, and affective atmosphere. Fashion and sound work together: fashion amplifies sound, sound animates fashion, and movement brings both into the social field.<br><br>The project’s core contribution is its theory of sonic graffiti: the idea that sound, fashion, and movement inscribe identity onto bodies and spaces, creating temporary but powerful archives of resistance, belonging, and self-expression.",
     evidence: ["Tokyo night header", "Club interior", "Shimokitazawa street fashion", "Field note scan", "Interview quote", "Map of locations"]
   },
   "sonic-anti-intimacy": {
@@ -128,9 +128,9 @@ const projects = {
     meta: "Original Theory · Oxford Essay · 2025",
     lead: "A theoretical framework for the engineering of disconnection through sound.",
     question: "What does the opposite of intimacy sound like?",
-    abstract: "This essay proposes sonic anti-intimacy: the condition in which sound is engineered to simulate closeness while producing detachment.",
-    investigation: "If sonic intimacy is touch without the body, then sonic anti-intimacy is presence without connection. From noise-cancelling headphones to Spotify mood playlists and engineered luxury retail acoustics, the essay traces how mediated sound becomes soft control.",
-    learned: "Sonic Anti-Intimacy became a lens for understanding designed environments and later informed Bekaa’s strategic framework.",
+    abstract: "This project investigates the sonic opposite of intimacy, arguing that it is not simply silence, distance, or absence, but an active condition of disconnection produced through sound itself. I propose the concept of sonic anti-intimacy: a mode of sonic mediation that appears to create closeness while actually fostering detachment, isolation, dominance, and social fragmentation.<br><br>If sonic intimacy is a kind of touch without physical contact, sonic anti-intimacy is presence without genuine relation. Through personal audio technologies, Muzak, algorithmic playlists, virtual assistants, and engineered silence, the project examines how sound can be used to organise, discipline, and separate bodies rather than bring them into contact.",
+    investigation: "The investigation draws on sound studies, Actor-Network Theory, theories of silence, and critiques of programmed music. It treats sound as an active social force rather than a passive background object.<br><br>The project identifies three mechanisms through which sonic anti-intimacy operates: sonic isolation, where headphones and personal listening technologies privatise shared space; sonic dominance, where background music, alarms, announcements, and virtual assistants regulate behaviour; and sonic detachment, where overexposure to sound produces numbness rather than sensitivity.<br><br>The analysis moves across examples including the Walkman, the iPod, noise-cancelling headphones, Muzak, Spotify-style mood playlists, Siri, Alexa, and Cagean silence to show how modern sonic environments simulate closeness while eroding genuine connection.",
+    learned: "The project reveals that sound can disconnect as intensely as it can connect. It can comfort, but it can also discipline. It can create private worlds, but those private worlds can isolate us from social and physical environments.<br><br>Sonic anti-intimacy became a way to connect several cultural objects under one theoretical framework. Headphones, Muzak, virtual assistants, algorithmic playlists, and silence all reveal the same pattern: modern sound often performs intimacy while masking systems of distance, control, and emotional management.",
     evidence: ["Theory diagram", "Sound environment image", "Noise-cancelling reference", "Retail acoustics note", "Framework excerpt", "Bekaa connection"]
   },
   "ear-body": {
@@ -139,20 +139,20 @@ const projects = {
     meta: "Academic Essay · Sound Studies · 2025",
     lead: "On whether the ear can be as choosy as the eye, and what erotic ASMR says about mediated listening.",
     question: "Can the ear look away?",
-    abstract: "This essay tests Dominic Pettman’s theory of sonic intimacy against binaural ASMR, erotic audio platforms and algorithmically curated listening.",
-    investigation: "There is something uncomfortably erotic about the way a whisper penetrates your ears through headphones. The essay asks whether this is intimacy or its simulation, and whether contemporary listening technology has altered the ear’s supposed passivity.",
-    learned: "The essay taught me to treat listening as a designed relationship, not a passive sensory event.",
+    abstract: "This project examines Dominic Pettman’s claim that sonic intimacy has particular affordances because of its intangibility, temporality, and because “the ear cannot be as choosy as the eye or the hand.”<br><br>The project agrees that sound possesses unique intimate power, but challenges the idea that the ear is entirely passive or undiscriminating. Through erotic ASMR, headphone listening, microphone technology, and the embodied voice, it argues that contemporary listening practices have made the ear more selective, curated, and technologically mediated than Pettman’s formulation allows.",
+    investigation: "The investigation focuses on the relationship between voice, body, fantasy, and technology. Erotic ASMR becomes the central case study because it demonstrates how intimacy can be generated without physical contact.<br><br>The project analyses whispers, breath, pauses, sighs, vocal texture, binaural recording, and headphone intimacy. These sonic details blur the boundary between hearing and touch, allowing the voice to function almost as a substitute body.<br><br>Rather than treating sound as something merely received, the project studies listening as an embodied and chosen practice. ASMR listeners actively select voices, accents, scenarios, genders, intensities, and emotional tones, proving that sonic intimacy is increasingly shaped by preference, desire, and technological control.",
+    learned: "The project reveals that sound does not simply enter the ear; it creates atmosphere, proximity, memory, and fantasy. A whisper, breath, or pause can produce sensations that feel almost tactile.<br><br>Technology does not merely transmit intimacy. It transforms it. Headphones, microphones, and streaming platforms reshape the relationship between voice and listener, often making sound feel closer than it would in real life.<br><br>The ear may be biologically open, but culturally and technologically, it has become increasingly selective. Contemporary sonic intimacy is negotiated between body, technology, and desire.",
     evidence: ["Headphones image", "ASMR visual", "Essay extract", "Theory note", "Listening diagram", "Quote card"]
   },
   "echoes": {
     title: "Echoes: The Fragility of the Human Psyche",
     type: "research",
-    meta: "Academic Essay · Music & Psychoanalysis · 2024",
+    meta: "Academic Essay · Oxford Essay · Music & Psychoanalysis · 2024",
     lead: "A Lacanian reading of Pink Floyd's 23-minute Echoes, visualised through Kay Sage, Yves Tanguy and Salvador Dalí.",
     question: "What happens when the structures holding the self together begin to fail?",
-    abstract: "A psychoanalytic reading of Pink Floyd’s Echoes as a three-phase journey through the Imaginary, the Real and the Symbolic.",
-    investigation: "A single high-pitched ping cuts through silence and frames the piece as a relentless dive into the human psyche. The essay maps the Descent, Chaos and Return through Lacanian theory and Surrealist painting.",
-    learned: "Echoes taught me how sound can stage psychological collapse without needing words.",
+    abstract: "This project examines Dominic Pettman’s claim that sonic intimacy has particular affordances because of its intangibility, temporality, and because “the ear cannot be as choosy as the eye or the hand.”<br><br>The project agrees that sound possesses unique intimate power, but challenges the idea that the ear is entirely passive or undiscriminating. Through erotic ASMR, headphone listening, microphone technology, and the embodied voice, it argues that contemporary listening practices have made the ear more selective, curated, and technologically mediated than Pettman’s formulation allows.",
+    investigation: "The investigation focuses on the relationship between voice, body, fantasy, and technology. Erotic ASMR becomes the central case study because it demonstrates how intimacy can be generated without physical contact.<br><br>The project analyses whispers, breath, pauses, sighs, vocal texture, binaural recording, and headphone intimacy. These sonic details blur the boundary between hearing and touch, allowing the voice to function almost as a substitute body.<br><br>Rather than treating sound as something merely received, the project studies listening as an embodied and chosen practice. ASMR listeners actively select voices, accents, scenarios, genders, intensities, and emotional tones, proving that sonic intimacy is increasingly shaped by preference, desire, and technological control.",
+    learned: "The project reveals that sound does not simply enter the ear; it creates atmosphere, proximity, memory, and fantasy. A whisper, breath, or pause can produce sensations that feel almost tactile.<br><br>Technology does not merely transmit intimacy. It transforms it. Headphones, microphones, and streaming platforms reshape the relationship between voice and listener, often making sound feel closer than it would in real life.<br><br>The ear may be biologically open, but culturally and technologically, it has become increasingly selective. Contemporary sonic intimacy is negotiated between body, technology, and desire.",
     evidence: ["Surrealist painting header", "Echoes album reference", "Essay diagram", "Lacan notes", "Painting comparison", "Quote extract"]
   }
 };
@@ -310,6 +310,9 @@ function openProject(key) {
   if (!p || !panel || !panelContent) return;
   const galleryClass = p.type === "fashion" ? "gallery-slots fashion" : "gallery-slots";
   const requestButton = p.type === "research" ? `<a class="request-btn" href="mailto:info@zairachrista.com?subject=Request full piece: ${encodeURIComponent(p.title)}">Request full piece</a>` : "";
+  const abstractHeading = p.type === "research" ? "The Premise" : "Abstract";
+  const investigationHeading = p.type === "research" ? "The Method" : "The Investigation";
+  const learnedHeading = p.type === "research" ? "The Discovery" : "What I Learned";
   panelContent.innerHTML = `
     <article class="project-room ${p.type}">
       <div class="project-hero-grid no-visual">
@@ -322,7 +325,7 @@ function openProject(key) {
       </div>
 
       <section class="project-section">
-        <p class="meta">Abstract</p>
+        <p class="meta">${abstractHeading}</p>
         <p>${p.abstract}</p>
       </section>
 
@@ -332,7 +335,7 @@ function openProject(key) {
       </section>
 
       <section class="project-section project-two-col">
-        <div><p class="meta">The Investigation</p></div>
+        <div><p class="meta">${investigationHeading}</p></div>
         <p>${p.investigation}</p>
       </section>
 
@@ -345,7 +348,7 @@ function openProject(key) {
       </section>`}
 
       <section class="project-section">
-        <p class="meta">What I Learned</p>
+        <p class="meta">${learnedHeading}</p>
         <p>${p.learned}</p>
       </section>
     </article>
