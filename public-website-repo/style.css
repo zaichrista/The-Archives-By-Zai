@@ -17,6 +17,49 @@
   --ease: cubic-bezier(.16, 1, .3, 1);
 }
 
+@media (max-width: 760px) {
+  .definition-tooltip {
+    position: fixed !important;
+    left: 12px !important;
+    right: 12px !important;
+    top: auto !important;
+    bottom: calc(14px + env(safe-area-inset-bottom)) !important;
+    width: auto !important;
+    max-width: none !important;
+    max-height: min(34vh, 260px) !important;
+    overflow-y: auto !important;
+    padding: 12px 14px 14px !important;
+    transform: translateY(10px) !important;
+    border-radius: 0 !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .definition-tooltip.show {
+    transform: translateY(0) !important;
+  }
+
+  .definition-tooltip h4 {
+    font-size: 26px !important;
+    line-height: .94 !important;
+    letter-spacing: -.03em !important;
+  }
+
+  .definition-tooltip .pron {
+    margin: 5px 0 8px !important;
+    font-size: 13px !important;
+    line-height: 1.18 !important;
+  }
+
+  .definition-tooltip .rule {
+    margin-bottom: 8px !important;
+  }
+
+  .definition-tooltip p:last-child {
+    font-size: 10px !important;
+    line-height: 1.36 !important;
+  }
+}
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
@@ -2717,5 +2760,48 @@ h1 {
     width: 100% !important;
     height: auto !important;
     object-fit: contain !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .definition-tooltip {
+    position: fixed !important;
+    left: 12px !important;
+    right: 12px !important;
+    top: auto !important;
+    bottom: calc(14px + env(safe-area-inset-bottom)) !important;
+    width: auto !important;
+    max-width: none !important;
+    max-height: min(34vh, 260px) !important;
+    overflow-y: auto !important;
+    padding: 12px 14px 14px !important;
+    transform: translateY(10px) !important;
+    border-radius: 0 !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .definition-tooltip.show {
+    transform: translateY(0) !important;
+  }
+
+  .definition-tooltip h4 {
+    font-size: 26px !important;
+    line-height: .94 !important;
+    letter-spacing: -.03em !important;
+  }
+
+  .definition-tooltip .pron {
+    margin: 5px 0 8px !important;
+    font-size: 13px !important;
+    line-height: 1.18 !important;
+  }
+
+  .definition-tooltip .rule {
+    margin-bottom: 8px !important;
+  }
+
+  .definition-tooltip p:last-child {
+    font-size: 10px !important;
+    line-height: 1.36 !important;
   }
 }

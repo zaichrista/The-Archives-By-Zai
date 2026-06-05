@@ -434,19 +434,19 @@ function hideDefinitionTooltip() {
 function positionDefinitionTooltip(clientX, clientY) {
   if (!definitionTooltip) return;
   const isSmallScreen = window.matchMedia("(max-width: 760px)").matches;
+  if (isSmallScreen) {
+    definitionTooltip.style.left = "";
+    definitionTooltip.style.top = "";
+    return;
+  }
   const gap = isSmallScreen ? 10 : 22;
   const edge = isSmallScreen ? 10 : 16;
   const rect = definitionTooltip.getBoundingClientRect();
   let x = clientX + gap;
   let y = clientY + gap;
 
-  if (isSmallScreen) {
-    x = Math.min(Math.max(edge, x), window.innerWidth - rect.width - edge);
-    y = Math.min(Math.max(edge, y), window.innerHeight - rect.height - edge);
-  } else {
-    if (x + rect.width > window.innerWidth - edge) x = clientX - rect.width - gap;
-    if (y + rect.height > window.innerHeight - edge) y = clientY - rect.height - gap;
-  }
+  if (x + rect.width > window.innerWidth - edge) x = clientX - rect.width - gap;
+  if (y + rect.height > window.innerHeight - edge) y = clientY - rect.height - gap;
 
   definitionTooltip.style.left = x + "px";
   definitionTooltip.style.top = y + "px";
@@ -489,11 +489,15 @@ document.querySelectorAll(".def-term").forEach(term => {
   });
 });
 
-document.addEventListener("click", (e) => {
+function closeDefinitionOnOutsideTap(e) {
   if (!definitionTooltip?.classList.contains("show")) return;
   if (e.target.closest(".def-term") || e.target.closest("#definitionTooltip")) return;
   hideDefinitionTooltip();
-});
+}
+
+document.addEventListener("pointerdown", closeDefinitionOnOutsideTap, true);
+document.addEventListener("touchstart", closeDefinitionOnOutsideTap, { capture: true, passive: true });
+document.addEventListener("click", closeDefinitionOnOutsideTap);
 
 window.addEventListener("scroll", hideDefinitionTooltip, { passive: true });
 window.addEventListener("resize", hideDefinitionTooltip);
