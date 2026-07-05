@@ -2828,3 +2828,86 @@ h1 {
     line-height: 1.36 !important;
   }
 }
+
+/* V19: accessibility, hire-me block, calmer hero slideshow. */
+
+.skip-link {
+  position: fixed;
+  top: -60px;
+  left: 16px;
+  z-index: 100000;
+  padding: 10px 16px;
+  background: var(--black);
+  color: var(--cream);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+  text-decoration: none;
+  border: 1px solid var(--gold);
+  transition: top .2s ease;
+}
+
+.skip-link:focus-visible {
+  top: 16px;
+}
+
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* Crossfade between hero photos instead of a hard cut. */
+.hero-logo-object.hero-slideshow .hero-slide {
+  transition: opacity .6s ease, visibility .6s ease !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-logo-object.hero-slideshow .hero-slide {
+    transition: none !important;
+  }
+  .loader {
+    transition: none;
+  }
+}
+
+.research-note {
+  max-width: 560px;
+  margin-top: 18px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.ways-to-work {
+  margin-top: 56px;
+}
+
+.ways-to-work .section-label {
+  color: rgba(255, 247, 232, .55);
+}
+
+.ways-to-work ul {
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ways-to-work li {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+  letter-spacing: .01em;
+  color: var(--cream);
+  padding-left: 22px;
+  position: relative;
+}
+
+.ways-to-work li::before {
+  content: "＋";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}

@@ -46,9 +46,9 @@ const projects = {
     investigation: "The existing brand was functional but forgettable. My proposal moved the identity toward kraft gold, terracotta, stamped packaging cues and a heavier wordmark that could hold signage, paper bags and street-food energy. The project became a study in making the distance between current brand and possible brand legible.",
     learned: "Baba G taught me that brand strategy often means helping people see what their own business could become before they are ready to become it.",
     evidence: [
-      { src: "assets/Baba%20G/Bag.png", alt: "Baba G branded paper bag mockup", preserveRatio: true },
-      { src: "assets/Baba%20G/Wrap%20sleeve.png", alt: "Baba G wrap sleeve packaging mockup", preserveRatio: true },
-      { src: "assets/Baba%20G/image.png", alt: "Baba G brand refresh visual", preserveRatio: true }
+      { src: "assets/Baba%20G/Bag.jpg", alt: "Baba G branded paper bag mockup", preserveRatio: true },
+      { src: "assets/Baba%20G/Wrap%20sleeve.jpg", alt: "Baba G wrap sleeve packaging mockup", preserveRatio: true },
+      { src: "assets/Baba%20G/image.jpg", alt: "Baba G brand refresh visual", preserveRatio: true }
     ]
   },
   "parikyo": {
@@ -61,10 +61,10 @@ const projects = {
     investigation: "The project began with a question: how can cultural fusion feel precise rather than generic? Paris and Tokyo are both mythologised fashion cities, but they carry different emotional weights. I wanted to place these symbolic systems into conversation rather than simply collage them together.<br><br>Kisses from Parikyo was built as a fictional world, allowing the brand to move through motifs such as lipstick marks, love letters, postmarks, hotel keys, train platforms, pearls, safety pins, silk, noir black, champagne gold, and red. These became fragments of a larger emotional archive.<br><br>The project also investigated the tension between couture and streetwear. Couture often works through control, discipline, and preciousness. Streetwear works through looseness, movement, and attitude. Kisses from Parikyo placed these languages against each other to create friction: romantic but aggressive, polished but unstable, delicate but urban.",
     learned: "Through Kisses from Parikyo, I learned that cultural fusion only works when it has emotional logic. It is not enough to place references together because they look beautiful. They have to need each other.<br><br>I also learned that world-building is one of my strongest design instincts. Once Parikyo existed as a fictional city, every design choice had somewhere to belong. Colours, silhouettes, motifs, and materials became evidence of a larger world.<br><br>Most importantly, the project taught me that cosmopolitan fashion does not have to feel rootless. Influence is inevitable. The task is to handle it with imagination, care, and specificity.",
     evidence: [
-      { src: "assets/Kisses%20from%20Paikyo%20-%20001/Look%201.png", alt: "Kisses from Parikyo look 1 full render", preserveRatio: true },
-      { src: "assets/Kisses%20from%20Paikyo%20-%20001/Look%202.png", alt: "Kisses from Parikyo look 2 full render", preserveRatio: true },
-      { src: "assets/Kisses%20from%20Paikyo%20-%20001/Look%203.png", alt: "Kisses from Parikyo look 3 full render", preserveRatio: true },
-      { src: "assets/Kisses%20from%20Paikyo%20-%20001/Look%204.png", alt: "Kisses from Parikyo look 4 full render", preserveRatio: true }
+      { src: "assets/Kisses%20from%20Paikyo%20-%20001/Look%201.jpg", alt: "Kisses from Parikyo look 1 full render", preserveRatio: true },
+      { src: "assets/Kisses%20from%20Paikyo%20-%20001/Look%202.jpg", alt: "Kisses from Parikyo look 2 full render", preserveRatio: true },
+      { src: "assets/Kisses%20from%20Paikyo%20-%20001/Look%203.jpg", alt: "Kisses from Parikyo look 3 full render", preserveRatio: true },
+      { src: "assets/Kisses%20from%20Paikyo%20-%20001/Look%204.jpg", alt: "Kisses from Parikyo look 4 full render", preserveRatio: true }
     ]
   },
   "fw23": {
@@ -125,14 +125,15 @@ const projects = {
     ]
   },
   "voyage-ascent": {
-    title: "A Voyage in Ascent",
+    title: "A Voyage in Ascent — Oxford Fashion Gala",
     type: "fashion",
-    meta: "Creative Direction · Oxford Fashion Gala · Photoshoot",
-    lead: "A fashion gala creative direction and photoshoot project built around ascent, atmosphere and image-making.",
+    meta: "Co-Creative Direction · Oxford Fashion Gala · 2023–2025",
+    lead: "Creative and marketing direction for Oxford's largest student fashion event — a themed world that tripled ticket sales year-on-year.",
     question: "How do you make a fashion event feel like a world before the runway begins?",
-    abstract: "A Voyage in Ascent was a creative direction project for the Oxford Fashion Gala, extending beyond the event into a visual world through photoshoot direction, styling, atmosphere and image construction.",
-    investigation: "The project treated the gala not as a single evening but as an ascent: an image-world where styling, model direction, pose, light and mood created a sense of movement toward something elevated. The photoshoot became the proof of concept, translating the gala’s atmosphere into editorial images.",
-    learned: "A Voyage in Ascent taught me that creative direction is not only about making something look beautiful. It is about controlling the emotional weather around an image.",
+    abstract: "A Voyage in Ascent was the creative direction of the Oxford Fashion Gala, Oxford’s largest annual student fashion event. As Co-Creative Director and Co-Marketing Director, I led the event from brief to live performance: concept development, casting, set design, choreography, and the campaign identity that carried the show to its audience.<br><br>The project extended beyond the evening itself into a visual world — photoshoot direction, styling, atmosphere and image construction — so that the gala existed as a place people wanted to enter long before the first look walked.",
+    investigation: "The project treated the gala not as a single evening but as an ascent: an image-world where styling, model direction, pose, light and mood created a sense of movement toward something elevated. The photoshoot became the proof of concept, translating the gala’s atmosphere into editorial images.<br><br>The marketing side was run with the same discipline as the creative side: a multi-platform social campaign built on curated content, strategic collaborations and a data-informed posting schedule, delivered by coordinating a volunteer team across every audience-facing asset. The result was a 200% year-on-year increase in ticket sales — the clearest evidence I have that atmosphere, handled strategically, converts.",
+    learned: "A Voyage in Ascent taught me that creative direction is not only about making something look beautiful. It is about controlling the emotional weather around an image — and that when the world-building is coherent enough, the commercial results follow. Tripling ticket sales did not come from louder promotion; it came from giving people a world worth buying a ticket to.",
+    evidenceComingSoon: true,
     evidence: ["Campaign image 01", "Campaign image 02", "Styling detail", "Model direction", "Moodboard", "Behind the scenes", "Poster / invite", "Editorial crop"]
   },
   "tokyo-drift": {
@@ -174,9 +175,9 @@ const projects = {
     meta: "Academic Essay · Oxford Essay · Music & Psychoanalysis · 2024",
     lead: "A Lacanian reading of Pink Floyd's 23-minute Echoes, visualised through Kay Sage, Yves Tanguy and Salvador Dalí.",
     question: "What happens when the structures holding the self together begin to fail?",
-    abstract: "This project examines Dominic Pettman’s claim that sonic intimacy has particular affordances because of its intangibility, temporality, and because “the ear cannot be as choosy as the eye or the hand.”<br><br>The project agrees that sound possesses unique intimate power, but challenges the idea that the ear is entirely passive or undiscriminating. Through erotic ASMR, headphone listening, microphone technology, and the embodied voice, it argues that contemporary listening practices have made the ear more selective, curated, and technologically mediated than Pettman’s formulation allows.",
-    investigation: "The investigation focuses on the relationship between voice, body, fantasy, and technology. Erotic ASMR becomes the central case study because it demonstrates how intimacy can be generated without physical contact.<br><br>The project analyses whispers, breath, pauses, sighs, vocal texture, binaural recording, and headphone intimacy. These sonic details blur the boundary between hearing and touch, allowing the voice to function almost as a substitute body.<br><br>Rather than treating sound as something merely received, the project studies listening as an embodied and chosen practice. ASMR listeners actively select voices, accents, scenarios, genders, intensities, and emotional tones, proving that sonic intimacy is increasingly shaped by preference, desire, and technological control.",
-    learned: "The project reveals that sound does not simply enter the ear; it creates atmosphere, proximity, memory, and fantasy. A whisper, breath, or pause can produce sensations that feel almost tactile.<br><br>Technology does not merely transmit intimacy. It transforms it. Headphones, microphones, and streaming platforms reshape the relationship between voice and listener, often making sound feel closer than it would in real life.<br><br>The ear may be biologically open, but culturally and technologically, it has become increasingly selective. Contemporary sonic intimacy is negotiated between body, technology, and desire.",
+    abstract: "Echoes reads Pink Floyd’s twenty-three-minute composition as a psychoanalytic document: a long-form study of how a self is assembled, held together, and quietly threatened from within. Using Lacan’s account of the fragmented body and the mirror stage, the essay treats the track’s slow build, dissolution, and return as a structural drama of the psyche rather than simply a piece of progressive rock.<br><br>To make that drama visible, the essay pairs the music with surrealist painting. Kay Sage’s desolate architectures, Yves Tanguy’s liquid horizons, and Dalí’s soft, collapsing forms become visual analogues for what the music does to the listener: they hold coherence and disintegration in the same frame.",
+    investigation: "The investigation moves section by section through Echoes, mapping its sonic architecture — the sonar ping, the gradual layering, the famous seagull-like guitar textures of the middle passage, and the final resolution — onto Lacanian structures of the self. The middle section, where melody gives way to wind and disembodied cries, is read as the composition’s encounter with the Real: the point where symbolic structure fails and something unassimilable comes through.<br><br>The paintings anchor each stage of the analysis. Sage’s empty scaffolding speaks to the ego’s fragile architecture, Tanguy’s horizonless landscapes to the loss of stable ground, and Dalí’s melting forms to the body-image coming apart. The essay treats these correspondences not as decoration but as a method: using one medium to expose the structure of another.",
+    learned: "The essay taught me that long-form music can carry a psychoanalytic argument in its structure, not just in its lyrics. Echoes does not describe fragility; it performs it, building a coherent world and then letting the listener feel that world thin out beneath them.<br><br>It was also where my method first became visible to me: putting theory, sound, and image into the same room and letting each discipline interrogate the others. That instinct — reading music through painting through psychoanalysis — became the template for everything I have written since.",
     evidence: ["Surrealist painting header", "Echoes album reference", "Essay diagram", "Lacan notes", "Painting comparison", "Quote extract"]
   }
 };
@@ -219,23 +220,31 @@ document.querySelectorAll("[data-cursor]").forEach(el => {
 const loaderLines = document.querySelectorAll(".loader-line");
 const loaderMark = document.querySelector(".loader-mark");
 const loader = document.getElementById("loader");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+// Keep the loader as a beat, not a wait: visitors decide in seconds.
+const loaderTimings = prefersReducedMotion
+  ? { second: 0, mark: 0, hide: 150 }
+  : { second: 500, mark: 1000, hide: 1500 };
 
 setTimeout(() => {
   loaderLines[0]?.classList.remove("active");
   loaderLines[1]?.classList.add("active");
-}, 1000);
+}, loaderTimings.second);
 
 setTimeout(() => {
   loaderLines[1]?.classList.remove("active");
   loaderMark?.classList.add("active");
-}, 2100);
+}, loaderTimings.mark);
 
 setTimeout(() => {
   loader?.classList.add("hide");
-}, 3300);
+}, loaderTimings.hide);
 
 const heroHeading = document.querySelector(".hero h1");
-if (heroHeading) {
+if (heroHeading && prefersReducedMotion) {
+  heroHeading.classList.add("typed-once");
+} else if (heroHeading) {
   const heroLineElements = Array.from(heroHeading.querySelectorAll("span"));
   const heroLineText = heroLineElements.map(line => line.textContent.trim());
   const typeCursor = document.createElement("span");
@@ -283,7 +292,7 @@ if (heroHeading) {
     };
 
     typeHeroCharacter();
-  }, 3450);
+  }, 1650);
 }
 
 const heroSlides = Array.from(document.querySelectorAll(".hero-slide"));
@@ -310,10 +319,12 @@ if (heroSlides.length) {
   }
 
   showHeroSlide(heroSlideIndex);
-  setInterval(() => {
-    heroSlideIndex = (heroSlideIndex + 1) % shuffledHeroSlides.length;
-    showHeroSlide(heroSlideIndex);
-  }, 500);
+  if (!prefersReducedMotion) {
+    setInterval(() => {
+      heroSlideIndex = (heroSlideIndex + 1) % shuffledHeroSlides.length;
+      showHeroSlide(heroSlideIndex);
+    }, 2600);
+  }
 }
 
 const panel = document.getElementById("projectPanel");
@@ -378,7 +389,11 @@ function openProject(key) {
   `;
   panel.classList.add("open");
   panel.setAttribute("aria-hidden", "false");
+  panel.setAttribute("role", "dialog");
+  panel.setAttribute("aria-modal", "true");
+  panel.setAttribute("aria-label", p.title);
   document.body.style.overflow = "hidden";
+  closeBtn?.focus({ preventScroll: true });
 }
 
 function closeProject() {
@@ -386,10 +401,29 @@ function closeProject() {
   panel.classList.remove("open");
   panel.setAttribute("aria-hidden", "true");
   document.body.style.overflow = "";
+  if (lastFocusedProjectTrigger) {
+    lastFocusedProjectTrigger.focus({ preventScroll: true });
+    lastFocusedProjectTrigger = null;
+  }
 }
 
+let lastFocusedProjectTrigger = null;
+
 document.querySelectorAll("[data-project]").forEach(el => {
-  el.addEventListener("click", () => openProject(el.dataset.project));
+  el.setAttribute("tabindex", "0");
+  el.setAttribute("role", "button");
+  el.setAttribute("aria-haspopup", "dialog");
+  el.addEventListener("click", () => {
+    lastFocusedProjectTrigger = el;
+    openProject(el.dataset.project);
+  });
+  el.addEventListener("keydown", e => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      lastFocusedProjectTrigger = el;
+      openProject(el.dataset.project);
+    }
+  });
 });
 
 closeBtn?.addEventListener("click", closeProject);
@@ -467,6 +501,15 @@ function showDefinitionTooltip(term, clientX, clientY) {
 }
 
 document.querySelectorAll(".def-term").forEach(term => {
+  term.setAttribute("tabindex", "0");
+  term.addEventListener("focus", () => {
+    const rect = term.getBoundingClientRect();
+    showDefinitionTooltip(term, rect.left + rect.width / 2, rect.bottom);
+  });
+  term.addEventListener("blur", hideDefinitionTooltip);
+  term.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") hideDefinitionTooltip();
+  });
   term.addEventListener("mouseenter", (e) => {
     if (window.matchMedia("(hover: none)").matches) return;
     showDefinitionTooltip(term, e.clientX, e.clientY);
