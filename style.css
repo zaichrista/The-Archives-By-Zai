@@ -2981,3 +2981,37 @@ button:focus-visible,
     max-height: none !important;
   }
 }
+
+/* V21: align footer wordmark with the Ways to work list. */
+.footer-lower {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(330px, .43fr) minmax(0, 1fr);
+  gap: clamp(30px, 5vw, 80px);
+  align-items: end;
+  margin-top: clamp(34px, 5vw, 70px);
+}
+
+.footer-lower .ways-to-work {
+  margin-top: 0;
+}
+
+.footer-lower .footer-wordmark {
+  position: static !important;
+  left: auto !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: none !important;
+  align-self: end;
+  font-size: clamp(104px, 11.2vw, 210px) !important;
+  line-height: .65 !important;
+  text-align: right;
+}
+
+@media (max-width: 760px) {
+  .footer-lower {
+    display: block;
+    margin-top: 34px;
+  }
+}
