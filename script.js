@@ -319,12 +319,10 @@ if (heroSlides.length) {
   }
 
   showHeroSlide(heroSlideIndex);
-  if (!prefersReducedMotion) {
-    setInterval(() => {
-      heroSlideIndex = (heroSlideIndex + 1) % shuffledHeroSlides.length;
-      showHeroSlide(heroSlideIndex);
-    }, 2600);
-  }
+  setInterval(() => {
+    heroSlideIndex = (heroSlideIndex + 1) % shuffledHeroSlides.length;
+    showHeroSlide(heroSlideIndex);
+  }, 500);
 }
 
 const panel = document.getElementById("projectPanel");
@@ -501,15 +499,6 @@ function showDefinitionTooltip(term, clientX, clientY) {
 }
 
 document.querySelectorAll(".def-term").forEach(term => {
-  term.setAttribute("tabindex", "0");
-  term.addEventListener("focus", () => {
-    const rect = term.getBoundingClientRect();
-    showDefinitionTooltip(term, rect.left + rect.width / 2, rect.bottom);
-  });
-  term.addEventListener("blur", hideDefinitionTooltip);
-  term.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") hideDefinitionTooltip();
-  });
   term.addEventListener("mouseenter", (e) => {
     if (window.matchMedia("(hover: none)").matches) return;
     showDefinitionTooltip(term, e.clientX, e.clientY);

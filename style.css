@@ -2829,7 +2829,11 @@ h1 {
   }
 }
 
-/* V19: accessibility, hire-me block, calmer hero slideshow. */
+/* V19: accessibility + hire-me block. */
+
+html {
+  overflow-x: hidden;
+}
 
 .skip-link {
   position: fixed;
@@ -2855,20 +2859,6 @@ button:focus-visible,
 [tabindex]:focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: 3px;
-}
-
-/* Crossfade between hero photos instead of a hard cut. */
-.hero-logo-object.hero-slideshow .hero-slide {
-  transition: opacity .6s ease, visibility .6s ease !important;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-logo-object.hero-slideshow .hero-slide {
-    transition: none !important;
-  }
-  .loader {
-    transition: none;
-  }
 }
 
 .research-note {
