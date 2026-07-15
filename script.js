@@ -51,6 +51,24 @@ const projects = {
       { src: "assets/Baba%20G/image.jpg", alt: "Baba G brand refresh visual", preserveRatio: true }
     ]
   },
+  "zcs-three-brands": {
+    title: "Three Brands, One City",
+    type: "brand",
+    meta: "Brand Strategy · Content Direction · ZC Studios · 2026",
+    lead: "Three restaurants under one owner, one postcode, one audience — briefed to feel like three completely different worlds, not three logo colours on the same template.",
+    question: "How do you stop three sister brands from blurring into one?",
+    abstract: "Baba G, Mandaloun and The Reach Brasserie share an owner, a postcode in West London, and an audience that might visit all three in one week. The brief wasn’t to run content for three restaurants — it was to build three genuinely different emotional worlds for brands that could easily have blurred into interchangeable hospitality content.<br><br>Under ZC Studios, I ran a diagnostic across all three, then defined a distinct positioning, voice and content system for each: Baba G as sports-coded neighbourhood warmth, Mandaloun as nostalgic Lebanese luxury, The Reach as elegant, controlled scandal.",
+    investigation: "Before writing anything, I audited each brand’s current copy, visual direction and social presence against where it needed to go. Baba G was functional and likeable but had zero personality built into it yet — its Instagram still linked to a Wix demo. Mandaloun’s copy read as generic luxury-restaurant template language, a full repositioning gap rather than a copy edit. The Reach, brand-new, had no legacy to undo but also none of the wit or glamour the brief called for — the widest creative gap of the three.<br><br>From that diagnostic I built three emotional worlds, each with an energy type, an emotional anchor and a hard no — the thing that must never appear. Baba G: match-day confidence and family generosity, never cold or corporate. Mandaloun: your mother’s kitchen drifting in from the next room, never generic “authentic Middle Eastern.” The Reach: The Ivy after dark, a scandal in a royal family group chat, never tacky or try-hard.<br><br>Those three positions then had to hold across a coordinated 30-day, 58-post content calendar — three brands posting in the same window without ever echoing each other in type, theme or tone. That coordination, not any single post, is the part of the work that reads as agency-level thinking rather than content management.",
+    learned: "Running three brand voices at once taught me that positioning problems don’t announce themselves as positioning problems — they show up first as “the content isn’t landing,” and the diagnostic work is figuring out which of the two you’re actually looking at. Mandaloun’s issue was never the caption; it was that nothing on the page yet sounded like the brand it wanted to be.<br><br>It also confirmed something about how I read culture: the line between “we understand Lebanese hospitality” and “the hummus your grandmother never shared the recipe for” is exactly the kind of tonal precision my background in Music and cultural theory is built for. That’s ZC Studios’ actual product — not content production, but knowing which register a brand should speak in before a single word gets written.",
+    evidence: [
+      { src: "assets/ZC%20Studios/Mandaloun/post_01_the_room.jpg", alt: "Mandaloun social post — the room, atmospheric interior shot", preserveRatio: true },
+      { src: "assets/ZC%20Studios/Mandaloun/post_04_muhallabieh.jpg", alt: "Mandaloun social post — muhallabieh dessert", preserveRatio: true },
+      { src: "assets/ZC%20Studios/Mandaloun/post_07_cocktail.jpg", alt: "Mandaloun social post — cocktail hour", preserveRatio: true },
+      { src: "assets/ZC%20Studios/The%20Reach%20Brasserie/post1_hero_exterior.jpg", alt: "The Reach Brasserie social post — hero exterior", preserveRatio: true },
+      { src: "assets/ZC%20Studios/The%20Reach%20Brasserie/post3_riverside_table.jpg", alt: "The Reach Brasserie social post — riverside table", preserveRatio: true },
+      { src: "assets/ZC%20Studios/The%20Reach%20Brasserie/post5_brand_launch.jpg", alt: "The Reach Brasserie social post — brand launch", preserveRatio: true }
+    ]
+  },
   "parikyo": {
     title: "Kisses from Parikyo",
     type: "fashion",
