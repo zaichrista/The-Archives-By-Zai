@@ -525,6 +525,8 @@ h1 {
 
 .work-line {
   display: grid;
+  color: inherit;
+  text-decoration: none;
   grid-template-columns: 70px 1fr 260px;
   align-items: center;
   gap: 30px;
@@ -532,6 +534,16 @@ h1 {
   border-bottom: 2px solid var(--ink);
   min-height: 160px;
   transition: background 0s, padding .35s var(--ease), color .35s var(--ease);
+}
+
+.work-line:visited {
+  color: inherit;
+}
+
+.work-line h3,
+.work-line p,
+.work-line span {
+  text-decoration: none;
 }
 
 .work-line:hover {
