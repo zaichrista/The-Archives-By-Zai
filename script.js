@@ -342,7 +342,7 @@ function openProject(key) {
   const p = projects[key];
   if (!p || !panel || !panelContent) return;
   const galleryClass = p.type === "fashion" ? "gallery-slots fashion" : "gallery-slots";
-  const requestButton = p.type === "research" ? `<a class="request-btn" href="mailto:info@zairachrista.com?subject=Request full piece: ${encodeURIComponent(p.title)}">Request full piece</a>` : "";
+  const requestButton = p.type === "research" ? `<a class="request-btn" href="mailto:zcbarakat@gmail.com?subject=Request full piece: ${encodeURIComponent(p.title)}">Request full piece</a>` : "";
   const abstractHeading = p.type === "research" ? "The Premise" : "Abstract";
   const investigationHeading = p.type === "research" ? "The Method" : "The Investigation";
   const learnedHeading = p.type === "research" ? "The Discovery" : "What I Learned";
@@ -409,9 +409,12 @@ let lastFocusedProjectTrigger = null;
 
 document.querySelectorAll("[data-project]").forEach(el => {
   el.setAttribute("tabindex", "0");
-  el.setAttribute("role", "button");
+  if (!el.matches("a[href]")) el.setAttribute("role", "button");
   el.setAttribute("aria-haspopup", "dialog");
-  el.addEventListener("click", () => {
+  el.addEventListener("click", e => {
+    // Keep the real href as a no-JavaScript/crawler fallback; the browser UI
+    // progressively enhances it into the existing project panel.
+    e.preventDefault();
     lastFocusedProjectTrigger = el;
     openProject(el.dataset.project);
   });
@@ -432,7 +435,30 @@ document.addEventListener("keydown", e => {
   if (e.key === "Escape") closeProject();
 });
 
-const revealEls = document.querySelectorAll(".section, .work-line, .research-grid article, .current-line");
+// Keep the six footer links/stars centred in the live space between the final
+// edge of “Conversation” and the photograph, even as fonts and widths change.
+function positionFooterLinks() {
+  const contact = document.querySelector(".contact");
+  const heading = document.querySelector(".contact-intro h2");
+  const conversation = document.querySelector(".conversation-word");
+  const photo = document.querySelector(".footer-photo");
+  if (!contact || !heading || !conversation || !photo || window.matchMedia("(max-width: 760px)").matches) {
+    contact?.style.removeProperty("--contact-links-midpoint");
+    return;
+  }
+
+  const headingRight = conversation.getBoundingClientRect().right;
+  const photoLeft = photo.getBoundingClientRect().left;
+  const contactLeft = contact.getBoundingClientRect().left;
+  const midpoint = headingRight + ((photoLeft - headingRight) / 2) - contactLeft;
+  contact.style.setProperty("--contact-links-midpoint", `${midpoint}px`);
+}
+
+window.addEventListener("load", positionFooterLinks);
+window.addEventListener("resize", positionFooterLinks);
+document.fonts?.ready.then(positionFooterLinks);
+
+const revealEls = document.querySelectorAll(".section, .work-line, .research-grid article, .research-grid > a, .current-line");
 const io = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) entry.target.classList.add("is-visible");
