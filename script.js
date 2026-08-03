@@ -371,6 +371,7 @@ function renderEvidenceItem(item) {
 function openProject(key) {
   const p = projects[key];
   if (!p || !panel || !panelContent) return;
+  const hasEvidence = Array.isArray(p.evidence) && p.evidence.length > 0;
   const galleryClass = p.type === "fashion" ? "gallery-slots fashion" : "gallery-slots";
   const requestButton = p.type === "research" ? `<a class="request-btn" href="mailto:zcbarakat@gmail.com?subject=Request full piece: ${encodeURIComponent(p.title)}">Request full piece</a>` : "";
   const abstractHeading = p.type === "research" ? "The Premise" : "Abstract";
@@ -402,9 +403,9 @@ function openProject(key) {
         <p>${p.investigation}</p>
       </section>
 
-      ${p.type === "research" ? "" : `<section class="project-section">
+      ${p.type === "research" || (!p.evidenceComingSoon && !hasEvidence) ? "" : `<section class="project-section">
         <p class="meta">${p.evidenceComingSoon ? "The evidence (coming soon)" : p.type === "fashion" ? "The looks" : "The evidence"}</p>
-        ${p.evidenceComingSoon ? "" : `<div class="${galleryClass}">
+        ${!hasEvidence ? "" : `<div class="${galleryClass}">
           ${p.evidence.map(renderEvidenceItem).join("")}
         </div>`}
       </section>`}
