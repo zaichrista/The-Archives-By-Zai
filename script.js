@@ -12,6 +12,26 @@ window.addEventListener("load", () => {
 });
 
 const projects = {
+  "reach": {
+    title: "The Reach Brasserie",
+    type: "brand",
+    meta: "Brand Recovery · Creative Direction · Hospitality · 2025–2026",
+    lead: "Brand recovery carried out from inside the room: operations, menus, signage, content, and the guest journey.",
+    question: "What does brand recovery look like when you're doing it from inside the room, not from a deck?",
+    abstract: "The Reach Brasserie is a London bar and restaurant where I ran the room and, without ever calling it that officially, ended up rebuilding the brand underneath it. Day-to-day bar management, service standards, supplier relationships, and staff performance sat alongside a longer piece of work: diagnosing what the brand wasn't doing for itself, then rebuilding the pieces that were missing, from signage and menu design to the customer's actual journey through the space.",
+    investigation: "Most brand recovery work happens at a distance: an agency visits, diagnoses, leaves a document, and someone else has to live with the recommendations. This was the opposite. I was already behind the bar, so the diagnosis and the delivery happened in the same place, often the same week. That meant developing a seasonal cocktail programme that had to work commercially, not just conceptually, alongside a wider brand effort: signage that actually matched how the space felt, a redesigned menu system, content and photography planning, and a closer look at what a guest experiences from the door to the table.",
+    learned: "I learned that brand recovery done from inside the operation is a different discipline to brand strategy done from outside it. You cannot recommend something you are not also prepared to run at 11pm on a Friday. Working this way taught me to think about brand decisions the way an operator has to: not just whether an idea is right, but whether it survives a busy service."
+  },
+  "mandaloun": {
+    title: "Mandaloun",
+    type: "brand",
+    meta: "Brand Culture & Content · Hospitality · 2020–2026",
+    lead: "Six years of content production and photoshoot support for a Lebanese hospitality brand in Westfield London.",
+    question: "What does a brand need from someone who shows up for it repeatedly, not just once?",
+    abstract: "Mandaloun is a Lebanese hospitality brand in Westfield London. Over six years I supported its content production and photoshoots, working repeatedly with the same brand long enough to understand how a hospitality identity holds together, and where it needs tending, over time rather than in a single campaign.",
+    investigation: "Most creative relationships are short: a shoot, a campaign, a handoff. Six years with Mandaloun meant something different, learning the brand's actual rhythms, not just its visual identity in the abstract, and producing content that had to keep making sense season after season rather than working once and ageing badly.",
+    learned: "I learned that consistency is its own creative skill, separate from having a good idea once. A brand's photography and content have to keep being recognisably itself while still feeling current, and that only gets harder to do well the longer the relationship runs, not easier."
+  },
   "bekaa": {
     title: "Bekaa",
     type: "brand",
@@ -21,6 +41,8 @@ const projects = {
     abstract: "Bekaa is a hospitality innovation strategy responding to the flattening of London’s nightlife. Contemporary bars are increasingly shaped by aesthetic repetition, social media sameness, and commercially standardised atmospheres that photograph well but rarely stay with you. Bekaa proposes a different model: a Mediterranean-informed listening bar, cocktail space, and cultural venue where music, drink, visual art, and communal ritual are experienced together.<br><br>Inspired by Lebanon’s Bekaa Valley, the project treats hospitality as cultural infrastructure. At its centre is my concept of archival capital: the value gained through the accumulation of visible and affective traces over time. A venue becomes meaningful not through instant spectacle, but through returning customers, worn surfaces, remembered songs, repeated rituals, and the emotional attachment people form with a place.",
     investigation: "The project began with a problem in London’s nightlife: too many spaces feel interchangeable, driven by visual marketability rather than cultural depth. A visit to Bar Ideal in Athens became a key reference point, revealing how music could connect a room rather than simply decorate it. From this, Bekaa developed into a music-first hospitality concept built around slowness, intimacy, and shared presence.<br><br>The strategy positioned Bekaa in South Kensington, an area rich in cultural institutions but lacking a strong nightlife identity. Its proximity to the V&A, Royal College of Art, Royal College of Music, Royal Albert Hall, Chelsea, and Notting Hill made it an ideal site for a venue aimed at culturally literate Londoners, artists, students, young professionals, and international residents.<br><br>The investigation combined market analysis, competitor research, brand positioning, financial planning, and operational strategy. Bekaa was differentiated from cocktail bars, listening bars, members’ clubs, gallery cafés, and cultural venues by treating music, art, mixology, and communal ritual as equals. The marketing strategy was built around calibrated revelation: revealing enough to create intrigue, but withholding enough to preserve mystery.",
     learned: "Through Bekaa, I learned that hospitality is not only about service, drinks, or interiors. It is about orchestrating emotional conditions. A strong venue gives people a rhythm, a corner, a sound, a ritual, and a reason to return.<br><br>I also learned how to turn theory into a business model. Archival capital became a way to think about customer retention, cultural authority, programming, brand loyalty, and the emotional ageing of space. The archive stopped being static and became commercial, sensory, and alive.<br><br>Most importantly, Bekaa taught me that innovation can be quiet. In a market obsessed with speed and visibility, slowness can become strategy. A bar can become a listening room. A cocktail can become a ritual. A venue can become powerful when it is remembered before it is explained.",
+    evidenceComingSoon: true,
+    evidence: ["Logo on dark background", "Mission / Vision / Values slide", "Competitor analysis table", "Audience profile", "Interior moodboard", "Music programme", "Cocktail ritual", "Spatial plan", "Archival capital diagram"]
   },
   "muni": {
     title: "Muni",
@@ -31,6 +53,8 @@ const projects = {
     abstract: "Muni is a modular clothing brand built around the belief that sustainability should not feel like restriction. Rather than approaching sustainable fashion through sacrifice, guilt, or upcycling alone, Muni proposes a usable capsule wardrobe with infinite possibilities, where the wearer becomes the designer.<br><br>The project responds to the fatigue surrounding sustainable fashion. Too often, sustainability is framed through absence: buy less, want less, desire less. Muni moves in the opposite direction, bringing pleasure, play, and authorship back into conscious dressing. Through detachable and interchangeable garments, clothing becomes a living system rather than a finished object.",
     investigation: "The investigation began with a frustration: sustainable fashion often feels visually tired. I wanted to imagine a wardrobe that was responsible without being emotionally flat. Instead of focusing only on reducing waste, Muni explored how clothes could extend attachment by giving the wearer more agency.<br><br>The capsule wardrobe became the project’s foundation, but I reinterpreted it as something flexible rather than fixed. Pieces could be attached, removed, layered, reversed, extended, or stripped back. The wearer would not simply style the garment; they would intervene in it.<br><br>The project also explored the aesthetics of utility. Modularity can easily become overly technical, so the challenge was to make function feel beautiful. Muni treats adaptability as a design language: practical, intimate, and alive.",
     learned: "Through Muni, I learned that sustainability becomes more powerful when it is tied to desire. People do not only keep clothes because they are ethical; they keep clothes because they continue to offer possibility.<br><br>I also learned that the wearer is an underused creative force. Fashion often speaks about individuality, but still gives the wearer a finished object. Muni gave me a different model: the designer provides the grammar, but the wearer writes the sentence.<br><br>Most importantly, Muni taught me that sustainability does not have to be aesthetically quiet. It can be playful, modular, sensual, and abundant without becoming wasteful.",
+    evidenceComingSoon: true,
+    evidence: ["Amber gradient logo", "Logo development", "Zipper system diagram", "Component map", "Garment construction", "Packaging concept", "User journey", "Brand world", "Kisses from Parikyo connection"]
   },
   "baba-g": {
     title: "Baba G — Brand Refresh Proposal",
@@ -131,6 +155,16 @@ const projects = {
     learned: "A Voyage in Ascent taught me that creative direction is not only about making something look beautiful. It is about controlling the emotional weather around an image — and that when the world-building is coherent enough, the commercial results follow. Tripling ticket sales did not come from louder promotion; it came from giving people a world worth buying a ticket to.",
     evidenceComingSoon: true,
     evidence: ["Campaign image 01", "Campaign image 02", "Styling detail", "Model direction", "Moodboard", "Behind the scenes", "Poster / invite", "Editorial crop"]
+  },
+  "fieldwork-to-framework": {
+    title: "From Fieldwork to Framework",
+    type: "research",
+    meta: "Research Method · A Worked Example · 2025",
+    lead: "A single chain made visible: a raw observation, a coded finding, and the commercial recommendation it produced.",
+    question: "How does a field observation become a decision a business can act on?",
+    abstract: "Most of the writing on this site shows finished thinking. This one shows the working. During the research for Bekaa, a visit to Bar Ideal in Athens surfaced something specific: the room wasn't decorated by its music, it was connected by it. People weren't just hearing a soundtrack. They were being held in the same shared moment by it. That's an observation, not yet an argument.",
+    investigation: "Read through my own framework of archival capital, that observation becomes something more precise: a room accumulates value not through instant spectacle, but through traces that get left behind and returned to, worn surfaces, remembered songs, repeated rituals. Bar Ideal wasn't succeeding because of good taste. It was succeeding because it was building an archive its regulars could feel themselves inside.<br><br>That finding became a specific decision in the Bekaa strategy: position the venue in South Kensington around slowness and return-worthiness rather than visual spectacle, prioritise the sound system and programming budget accordingly, and build the marketing around calibrated revelation, giving away enough to create intrigue while protecting the thing that actually needs protecting, which is the room's ability to be genuinely experienced rather than just photographed.",
+    learned: "This is the actual shape of the work I do: an observation that most people would just enjoy and move past, run through a framework precise enough to explain why it worked, converted into a decision a business could act on. The theory isn't decoration on top of the research. It's the thing that makes the research usable."
   },
   "tokyo-drift": {
     title: "Tokyo Drift: The Sonic Graffiti of the Tokyoite Underground",
@@ -368,7 +402,7 @@ function openProject(key) {
         <p>${p.investigation}</p>
       </section>
 
-      ${p.type === "research" || !p.evidence?.length ? "" : `<section class="project-section">
+      ${p.type === "research" ? "" : `<section class="project-section">
         <p class="meta">${p.evidenceComingSoon ? "The evidence (coming soon)" : p.type === "fashion" ? "The looks" : "The evidence"}</p>
         ${p.evidenceComingSoon ? "" : `<div class="${galleryClass}">
           ${p.evidence.map(renderEvidenceItem).join("")}
@@ -431,7 +465,7 @@ document.addEventListener("keydown", e => {
   if (e.key === "Escape") closeProject();
 });
 
-// Keep the six footer links/stars centred in the live space between the final
+// Keep the footer links/stars centred in the live space between the final
 // edge of “Conversation” and the photograph, even as fonts and widths change.
 function positionFooterLinks() {
   const contact = document.querySelector(".contact");

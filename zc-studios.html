@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ZC Studios is a thirteen-agent cultural strategy operating system built and directed by Zaira Christa." />
+    <title>ZC Studios // Cultural Strategy Operating System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="zc-studios.css" />
+  </head>
+  <body class="zcs-loading">
+    <div class="noise" aria-hidden="true"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+
+    <div class="zcs-loader" id="zcsLoader" aria-label="Loading ZC Studios">
+      <div class="zcs-loader-pixels" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="zcs-loader-inner">
+        <div class="zcs-loader-system-row">
+          <span>BOOT_SEQUENCE // ZCS_OS</span>
+          <span id="zcsLoaderStatus">INITIALISING</span>
+        </div>
+        <p class="zcs-loader-lead" data-text="ZC Studios helps brands">ZC Studios helps brands</p>
+        <div class="zcs-loader-track" id="zcsLoaderTrack" role="progressbar" aria-label="Page loading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div class="zcs-loader-segments" id="zcsLoaderSegments" aria-hidden="true"></div>
+        </div>
+        <div class="zcs-loader-footer">
+          <p>make sense.</p>
+          <span id="zcsLoaderPercent">000%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-stack">
+      <header class="portfolio-header">
+        <a href="index.html#home" class="portfolio-brand" data-cursor="home">
+          <img src="assets/zc-word-logo.png" alt="Zaira Christa" />
+        </a>
+        <nav class="portfolio-nav" aria-label="Portfolio navigation">
+          <a href="index.html#profile" data-cursor="read">Profile</a>
+          <a href="index.html#work" data-cursor="view">Works</a>
+          <a href="index.html#research" data-cursor="think">Research</a>
+          <a href="zc-studios.html" aria-current="page" data-cursor="view">Studio</a>
+          <a href="cv.html" data-cursor="read">CV</a>
+          <a href="index.html#contact" data-cursor="write">Contact</a>
+        </nav>
+        <div class="portfolio-availability">Available for 2026</div>
+      </header>
+
+      <header class="topbar">
+        <a class="zcs-menu-mark" href="#hero">ZCS</a>
+        <nav class="nav" aria-label="ZC Studios navigation">
+          <a href="#definition">STUDIO</a>
+          <a href="#agents">AGENTS</a>
+          <a href="#workflow">WORKFLOW</a>
+          <a href="#qc">QC</a>
+          <a href="#deliverables">DELIVERABLES</a>
+        </nav>
+      </header>
+    </div>
+
+    <aside class="side-rail" aria-label="Page status">
+      <a href="#hero" class="rail-logo">ZCS</a>
+      <div class="rail-progress"><span id="scrollProgress"></span></div>
+      <p id="activeSection">SYSTEM_READY</p>
+    </aside>
+
+    <main>
+      <section class="hero section" id="hero" data-label="SYSTEM_BOOT">
+        <img class="texture" src="assets/system-map-texture.png" alt="" />
+        <div class="boot-panel reveal">
+          <p class="tag">ZC_STUDIOS // CULTURAL_STRATEGY_OS</p>
+          <h1>ZC Studios makes founder-led brands make sense.</h1>
+          <p class="lede">
+            A cultural strategy studio that turns raw instinct into a coherent brand world through a locked thirteen-agent workflow.
+          </p>
+          <div class="terminal-lines" aria-label="System boot messages">
+            <span>> 13_AGENTS_LOADED</span>
+            <span>> MARGAUX_GATES_ACTIVE</span>
+            <span>> CAIUS_BENCHMARK_BANK_CONNECTED</span>
+            <span>> ZAIRA_FINAL_DECISION_LAYER_ONLINE</span>
+          </div>
+          <div class="button-row">
+            <a class="btn primary" href="#agents">EXPLORE_SYSTEM</a>
+            <a class="btn" href="#workflow">RUN_WORKFLOW</a>
+          </div>
+        </div>
+
+        <div class="system-core reveal" id="systemCore" aria-label="Interactive system core">
+          <button class="core-node founder" data-core="founder"><b>ZAIRA</b><span>DIRECTOR</span></button>
+          <button class="core-node agents" data-core="agents"><b>13</b><span>AGENTS</span></button>
+          <button class="core-node gates" data-core="gates"><b>08</b><span>QC_GATES</span></button>
+          <button class="core-node bank" data-core="bank"><b>14</b><span>BENCHMARKS</span></button>
+          <button class="core-node delivery" data-core="delivery"><b>10</b><span>OUTPUTS</span></button>
+          <div class="core-center">
+            <span>ZCS</span>
+            <small>STRATEGY_OS</small>
+          </div>
+          <div class="core-readout" id="coreReadout">
+            Click any node to inspect the operating layer.
+          </div>
+        </div>
+      </section>
+
+      <section class="definition section grid-2" id="definition" data-label="STUDIO_DEFINITION">
+        <div class="sticky-label reveal">
+          <p class="tag">WHAT_ZCS_IS</p>
+          <button class="mini-command" data-command="definition">OPEN_DEFINITION_CARD</button>
+        </div>
+        <div class="copy-block reveal">
+          <h2>ZC Studios builds the logic beneath founder-led brands.</h2>
+          <p>
+            It defines the positioning, world, voice, visual direction, customer journey, and content system that makes a brand coherent, desirable, and commercially functional.
+          </p>
+          <blockquote>ZC Studios does not make brands look polished. It makes brands make sense.</blockquote>
+          <div class="metric-row">
+            <button data-metric="coherence"><span>01</span>COHERENCE</button>
+            <button data-metric="desirability"><span>02</span>DESIRABILITY</button>
+            <button data-metric="commercial"><span>03</span>COMMERCIAL_FUNCTION</button>
+          </div>
+          <div class="readout-card" id="metricReadout">Select a logic pillar.</div>
+        </div>
+      </section>
+
+      <section class="section founder-model" id="model" data-label="FOUNDER_CONTROL">
+        <div class="section-head reveal">
+          <p class="tag">FOUNDER_CONTROLLED_AI_STUDIO_MODEL</p>
+          <h2>The agents execute. She decides.</h2>
+          <p>
+            ZC Studios runs on thirteen specialist AI agents. Each has a role, sequence position, and output. They are operational Claude skills, not mascots.
+          </p>
+        </div>
+        <div class="control-stack reveal">
+          <div class="stack-card director-card">
+            <span>FINAL_DECISION_LAYER</span>
+            <b>ZAIRA_CHRISTA</b>
+            <small>Creative Director / Lead Strategist / Final Decision-Maker</small>
+          </div>
+          <div class="stack-grid">
+            <article><span>01</span>13 specialist agents</article>
+            <article><span>02</span>Locked workflow sequence</article>
+            <article><span>03</span>Margaux quality gates</article>
+            <article><span>04</span>Honorine delivery architecture</article>
+            <article><span>05</span>Caius benchmark intelligence</article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section agents" id="agents" data-label="AGENT_MAP">
+        <div class="section-head reveal">
+          <p class="tag">INTERACTIVE_AGENT_MAP</p>
+          <h2>Thirteen agents, one controlled system.</h2>
+        </div>
+        <div class="toolbar reveal">
+          <input id="agentSearch" type="search" placeholder="SEARCH_AGENT_OR_ROLE" aria-label="Search agents" />
+          <div class="filter-set" id="agentFilters"></div>
+        </div>
+        <div class="agent-console reveal">
+          <div class="agent-grid" id="agentGrid"></div>
+          <aside class="inspect-panel" id="agentPanel" aria-live="polite"></aside>
+        </div>
+      </section>
+
+      <section class="section workflow" id="workflow" data-label="LOCKED_WORKFLOW">
+        <div class="section-head reveal">
+          <p class="tag">RUN_THE_SEQUENCE</p>
+          <h2>Every phase produces the next phase’s input.</h2>
+          <p>Between every stage sits a Margaux gate: review, pressure-test, repair, then handoff.</p>
+          <div class="button-row compact">
+            <button class="btn primary" id="runWorkflow">RUN_SIMULATION</button>
+            <button class="btn" id="resetWorkflow">RESET</button>
+          </div>
+        </div>
+        <div class="workflow-board reveal">
+          <div class="phase-rail" id="phaseRail"></div>
+          <div class="phase-inspector" id="phaseInspector"></div>
+        </div>
+      </section>
+
+      <section class="section qc" id="qc" data-label="QUALITY_CONTROL">
+        <div class="section-head reveal">
+          <p class="tag">MARGAUX_QC_LAYER</p>
+          <h2>Nothing becomes the next agent’s input without a pass.</h2>
+          <blockquote>If it could apply to any brand, it is not ready.</blockquote>
+        </div>
+        <div class="qc-console reveal">
+          <div class="gate-checks" id="gateChecks"></div>
+          <div class="qc-score">
+            <span>QC_SCORE</span>
+            <b id="qcScore">0/8</b>
+            <p id="qcStatus">Click gates to simulate a pass check.</p>
+          </div>
+          <div class="standard-cloud" id="standardCloud"></div>
+        </div>
+      </section>
+
+      <section class="section diagnostic" id="elian" data-label="THEORY_CALIBRATION">
+        <div class="section-head reveal">
+          <p class="tag">ELIAN_DIAGNOSTIC_LAYER</p>
+          <h2>The stage most studios skip.</h2>
+          <p>Elian answers the question: what is this brand, really, beneath the surface?</p>
+        </div>
+        <div class="matrix reveal">
+          <div class="chip-grid" id="diagnosticChips"></div>
+          <div class="matrix-readout" id="diagnosticReadout">Select a diagnostic dimension.</div>
+        </div>
+        <p class="system-line reveal">No downstream agent may begin work on a brand that has not been calibrated.</p>
+      </section>
+
+      <section class="section caius" id="caius" data-label="BENCHMARK_INTELLIGENCE">
+        <div class="section-head reveal">
+          <p class="tag">CAIUS_BENCHMARK_BANK</p>
+          <h2>Caius studies excellence without copying it.</h2>
+          <p>He extracts transferable principles from high-performing brands and blocks surface imitation.</p>
+        </div>
+        <div class="principle-lab reveal">
+          <div class="compare-card bad">
+            <span>SURFACE_FEATURE</span>
+            <p>“Byredo uses matte black packaging.”</p>
+          </div>
+          <button class="swap-btn" id="principleSwap">TRANSLATE_TO_PRINCIPLE</button>
+          <div class="compare-card good" id="principleCard">
+            <span>TRANSFERABLE_PRINCIPLE</span>
+            <p>Click translate to reveal the usable logic.</p>
+          </div>
+        </div>
+        <div class="benchmark-bank reveal" id="benchmarkBank"></div>
+        <blockquote class="reveal">The principle travels. The brand does not.</blockquote>
+      </section>
+
+      <section class="section maturity" id="maturity" data-label="MATURITY_FRAMEWORK">
+        <div class="section-head reveal">
+          <p class="tag">ZCS_BRAND_MATURITY_FRAMEWORK</p>
+          <h2>11 levels. 5 modes. One diagnostic starting point.</h2>
+        </div>
+        <div class="slider-console reveal">
+          <label for="maturitySlider">MATURITY_LEVEL: <b id="levelValue">4</b></label>
+          <input id="maturitySlider" type="range" min="0" max="10" value="4" step="1" />
+          <div class="maturity-output" id="maturityOutput"></div>
+        </div>
+        <div class="mode-grid reveal" id="modeGrid"></div>
+        <p class="system-line reveal">This framework has been stress-tested against 16 brands. 16 pass.</p>
+      </section>
+
+      <section class="section deliverables" id="deliverables" data-label="CLIENT_OUTPUTS">
+        <div class="section-head reveal">
+          <p class="tag">WHAT_A_CLIENT_RECEIVES</p>
+          <h2>Strategy becomes usable infrastructure.</h2>
+        </div>
+        <div class="toolbar reveal">
+          <div class="filter-set" id="deliverableFilters"></div>
+          <button class="btn" id="expandAllDeliverables">EXPAND_ALL</button>
+        </div>
+        <div class="deliverable-grid reveal" id="deliverableGrid"></div>
+      </section>
+
+      <section class="section final" id="summary" data-label="FINAL_SUMMARY">
+        <div class="final-card reveal">
+          <p class="tag">INVESTOR_CLIENT_SUMMARY</p>
+          <h2>A locked workflow for turning instinct into brand infrastructure.</h2>
+          <p>
+            ZC Studios helps founder-led brands move from scattered instinct to coherent strategic worlds. Each stage has a precise role, every output is quality-controlled, and nothing client-facing is invented without evidence.
+          </p>
+          <blockquote>
+            ZC Studios is a thirteen-agent brand strategy system, built and operated by Zaira Christa, that takes a founder-led brand from raw instinct to a fully structured strategic world.
+          </blockquote>
+          <div class="button-row">
+            <a class="btn primary" href="mailto:hello@zcstudios.co?subject=Strategic%20Review">REQUEST_REVIEW</a>
+            <a class="btn" href="#workflow">SEE_WORKFLOW</a>
+            <a class="btn" href="mailto:zaira@zcstudios.co">CONTACT_ZAIRA</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal" id="modal" aria-hidden="true">
+      <div class="modal-card" role="dialog" aria-modal="true" aria-label="Information card">
+        <button class="modal-close" id="modalClose">CLOSE_X</button>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+
+    <script src="zc-studios.js"></script>
+  </body>
+</html>
