@@ -227,6 +227,7 @@ a, button, article { cursor: none; }
 }
 
 .nav a:hover { border-color: currentColor; }
+.nav a.studio-nav-link { color: #ff2f86; }
 .availability { justify-self: end; text-transform: uppercase; }
 
 .section {
