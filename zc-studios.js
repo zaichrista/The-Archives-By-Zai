@@ -1,11 +1,3 @@
-if ("scrollRestoration" in window.history) {
-  window.history.scrollRestoration = "manual";
-}
-
-if (window.location.hash) {
-  window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
-}
-
 function syncPortfolioHeaderHeight() {
   const portfolioHeader = document.querySelector(".portfolio-header");
   if (!portfolioHeader) return;
@@ -19,26 +11,6 @@ window.addEventListener("load", syncPortfolioHeaderHeight);
 if ("ResizeObserver" in window) {
   new ResizeObserver(syncPortfolioHeaderHeight).observe(document.querySelector(".portfolio-header"));
 }
-
-function resetPageScroll() {
-  const root = document.documentElement;
-  const previousScrollBehavior = root.style.scrollBehavior;
-  root.style.scrollBehavior = "auto";
-  window.scrollTo(0, 0);
-  root.scrollTop = 0;
-  document.body.scrollTop = 0;
-  root.style.scrollBehavior = previousScrollBehavior;
-}
-
-resetPageScroll();
-document.addEventListener("DOMContentLoaded", resetPageScroll);
-window.addEventListener("load", resetPageScroll);
-window.addEventListener("pageshow", () => {
-  resetPageScroll();
-  window.requestAnimationFrame(resetPageScroll);
-  window.setTimeout(resetPageScroll, 100);
-});
-window.addEventListener("pagehide", resetPageScroll);
 
 const zcsLoader = document.querySelector("#zcsLoader");
 const zcsLoaderTrack = document.querySelector("#zcsLoaderTrack");
@@ -98,7 +70,6 @@ function runZcsLoader(now) {
   window.setTimeout(() => {
     zcsLoader.classList.add("is-hidden");
     document.body.classList.remove("zcs-loading");
-    resetPageScroll();
   }, reduceLoaderMotion ? 0 : 450);
 }
 
@@ -423,8 +394,44 @@ function wireEvents(){
   $("#modalClose").addEventListener("click", closeModal);
   $("#modal").addEventListener("click", e => { if(e.target.id === "modal") closeModal(); });
 }
-function openModal(html){ $("#modalContent").innerHTML = html; $("#modal").classList.add("open"); $("#modal").setAttribute("aria-hidden","false"); }
-function closeModal(){ $("#modal").classList.remove("open"); $("#modal").setAttribute("aria-hidden","true"); }
+let modalReturnFocus = null;
+function openModal(html){
+  modalReturnFocus = document.activeElement;
+  $("#modalContent").innerHTML = html;
+  $("#modal").classList.add("open");
+  $("#modal").setAttribute("aria-hidden","false");
+  document.body.style.overflow = "hidden";
+  $("#modalClose").focus();
+}
+function closeModal(){
+  if (!$("#modal").classList.contains("open")) return;
+  $("#modal").classList.remove("open");
+  $("#modal").setAttribute("aria-hidden","true");
+  document.body.style.overflow = "";
+  modalReturnFocus?.focus();
+  modalReturnFocus = null;
+}
+
+document.addEventListener("keydown", event => {
+  if (!$("#modal").classList.contains("open")) return;
+  if (event.key === "Escape") {
+    closeModal();
+    return;
+  }
+  if (event.key !== "Tab") return;
+  const focusable = Array.from($("#modal").querySelectorAll("button, a[href], input, [tabindex]:not([tabindex='-1'])"))
+    .filter(element => element.getClientRects().length > 0);
+  if (!focusable.length) return;
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
+});
 function wireMotion(){
   const dot = $(".cursor-dot");
   window.addEventListener("mousemove", e => { dot.style.left = `${e.clientX}px`; dot.style.top = `${e.clientY}px`; });
@@ -444,6 +451,46 @@ function wireMotion(){
   }, {passive:true});
 }
 
+function wireDirectionAwareHeader(){
+  const header = $(".header-stack");
+  if (!header) return;
+
+  let previousScrollY = Math.max(window.scrollY, 0);
+  let frameRequested = false;
+  let accumulatedMovement = 0;
+
+  function updateHeader(){
+    const currentScrollY = Math.max(window.scrollY, 0);
+    const movement = currentScrollY - previousScrollY;
+
+    if (movement && Math.sign(movement) !== Math.sign(accumulatedMovement)) {
+      accumulatedMovement = movement;
+    } else {
+      accumulatedMovement += movement;
+    }
+
+    if (currentScrollY <= 12) {
+      document.body.classList.remove("zcs-header-hidden");
+      accumulatedMovement = 0;
+    } else if (accumulatedMovement > 6) {
+      document.body.classList.add("zcs-header-hidden");
+      accumulatedMovement = 0;
+    } else if (accumulatedMovement < -6) {
+      document.body.classList.remove("zcs-header-hidden");
+      accumulatedMovement = 0;
+    }
+
+    previousScrollY = currentScrollY;
+    frameRequested = false;
+  }
+
+  window.addEventListener("scroll", () => {
+    if (frameRequested) return;
+    frameRequested = true;
+    window.requestAnimationFrame(updateHeader);
+  }, { passive: true });
+}
+
 renderAgentFilters();
 renderAgents();
 renderPhases();
@@ -455,4 +502,5 @@ renderDeliverableFilters();
 renderDeliverables();
 wireEvents();
 wireMotion();
+wireDirectionAwareHeader();
 updateQC();

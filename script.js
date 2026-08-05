@@ -1,16 +1,4 @@
 
-// V17: force website to open at the top, not at the last browser scroll position.
-if ("scrollRestoration" in history) {
-  history.scrollRestoration = "manual";
-}
-window.addEventListener("beforeunload", () => {
-  window.scrollTo(0, 0);
-});
-window.addEventListener("load", () => {
-  setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: "instant" }), 0);
-  setTimeout(() => window.scrollTo(0, 0), 80);
-});
-
 const projects = {
   "reach": {
     title: "The Reach Brasserie",
@@ -382,7 +370,7 @@ function openProject(key) {
       <div class="project-hero-grid no-visual">
         <div>
           <p class="meta">${p.meta}</p>
-          <h2>${p.title}</h2>
+          <h2 id="projectTitle">${p.title}</h2>
           <p class="lead">${p.lead}</p>
           ${requestButton}
         </div>
@@ -417,10 +405,11 @@ function openProject(key) {
     </article>
   `;
   panel.classList.add("open");
+  panelContent.scrollTop = 0;
   panel.setAttribute("aria-hidden", "false");
   panel.setAttribute("role", "dialog");
   panel.setAttribute("aria-modal", "true");
-  panel.setAttribute("aria-label", p.title);
+  panel.setAttribute("aria-labelledby", "projectTitle");
   document.body.style.overflow = "hidden";
   closeBtn?.focus({ preventScroll: true });
 }
@@ -463,7 +452,27 @@ panel?.addEventListener("click", e => {
   if (e.target === panel) closeProject();
 });
 document.addEventListener("keydown", e => {
-  if (e.key === "Escape") closeProject();
+  if (!panel?.classList.contains("open")) return;
+  if (e.key === "Escape") {
+    closeProject();
+    return;
+  }
+  if (e.key !== "Tab") return;
+
+  const focusable = Array.from(panel.querySelectorAll(
+    'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+  )).filter(element => element.getClientRects().length > 0);
+  if (!focusable.length) return;
+
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  if (e.shiftKey && document.activeElement === first) {
+    e.preventDefault();
+    last.focus();
+  } else if (!e.shiftKey && document.activeElement === last) {
+    e.preventDefault();
+    first.focus();
+  }
 });
 
 // Keep the footer links/stars centred in the live space between the final
@@ -515,6 +524,7 @@ let activeDefinitionTerm = null;
 
 function hideDefinitionTooltip() {
   if (!definitionTooltip) return;
+  activeDefinitionTerm?.setAttribute("aria-expanded", "false");
   activeDefinitionTerm = null;
   definitionTooltip.classList.remove("show");
   definitionTooltip.setAttribute("aria-hidden", "true");
@@ -543,7 +553,9 @@ function positionDefinitionTooltip(clientX, clientY) {
 
 function showDefinitionTooltip(term, clientX, clientY) {
   if (!definitionTooltip) return;
+  activeDefinitionTerm?.setAttribute("aria-expanded", "false");
   activeDefinitionTerm = term;
+  term.setAttribute("aria-expanded", "true");
   definitionTooltip.innerHTML = `
     <h4>${term.dataset.title}</h4>
     <p class="pron">${term.dataset.pron}</p>
@@ -556,6 +568,9 @@ function showDefinitionTooltip(term, clientX, clientY) {
 }
 
 document.querySelectorAll(".def-term").forEach(term => {
+  term.setAttribute("role", "button");
+  term.setAttribute("tabindex", "0");
+  term.setAttribute("aria-expanded", "false");
   term.addEventListener("mouseenter", (e) => {
     if (window.matchMedia("(hover: none)").matches) return;
     showDefinitionTooltip(term, e.clientX, e.clientY);
@@ -575,6 +590,16 @@ document.querySelectorAll(".def-term").forEach(term => {
       return;
     }
     showDefinitionTooltip(term, e.clientX, e.clientY);
+  });
+  term.addEventListener("keydown", (e) => {
+    if (e.key !== "Enter" && e.key !== " ") return;
+    e.preventDefault();
+    const rect = term.getBoundingClientRect();
+    if (activeDefinitionTerm === term && definitionTooltip?.classList.contains("show")) {
+      hideDefinitionTooltip();
+      return;
+    }
+    showDefinitionTooltip(term, rect.left + rect.width / 2, rect.bottom);
   });
 });
 

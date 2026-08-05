@@ -3,10 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CV — Zaira Christa Barakat | Creative Direction & Strategy</title>
+  <title>CV — Zaira Christa Barakat | Creative Direction &amp; Strategy</title>
   <meta name="description" content="Curriculum vitae of Zaira Christa Barakat: creative direction, campaign strategy, brand identity and cultural research." />
   <meta name="author" content="Zaira Christa" />
   <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#f8f6f0" />
+  <meta property="og:site_name" content="The Archives by Zai" />
+  <meta property="og:title" content="CV — Zaira Christa Barakat" />
+  <meta property="og:description" content="Experience, education and selected projects across creative direction, brand strategy and cultural research." />
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://zaichrista.github.io/The-Archives-By-Zai/cv.html" />
   <link rel="canonical" href="https://zaichrista.github.io/The-Archives-By-Zai/cv.html" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <style>
@@ -188,6 +194,20 @@
 
     a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
+    .skip-link {
+      position: fixed;
+      top: -60px;
+      left: 16px;
+      z-index: 100;
+      padding: 10px 16px;
+      background: var(--black);
+      color: var(--cream);
+      text-decoration: none;
+      transition: top .2s ease;
+    }
+
+    .skip-link:focus-visible { top: 16px; }
+
     @media print {
       @page { size: A4 portrait; margin: 9mm 10mm; }
 
@@ -255,10 +275,11 @@
 </head>
 
 <body>
-  <div class="cv-wrap">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <main class="cv-wrap" id="main-content" tabindex="-1">
     <nav class="cv-topbar" aria-label="CV navigation">
       <a href="index.html">← Back to the archive</a>
-      <a class="cv-download" href="assets/ZCB%20CV.pdf" download="Zaira Christa Barakat.pdf">Download CV (PDF)</a>
+      <a class="cv-download" href="assets/Zaira-Christa-Barakat-CV.pdf" download="Zaira Christa Barakat CV.pdf">Download CV (PDF)</a>
     </nav>
 
     <header>
@@ -278,7 +299,7 @@
         Oxford-educated strategist completing an MA in Cultural and Creative Industries at King’s College London, with a
         research-led approach built on close analysis, structured argument, and evidence-based decision-making. Directed an
         independent fashion label from concept to catwalk, managing contracts, stakeholder negotiations, and commercial risk
-        at each stage; and drove a threefold increase in ticket sales for Oxford’s flagship fashion even through data-informed
+        at each stage; and drove a threefold increase in ticket sales for Oxford’s flagship fashion event through data-informed
         strategy. Combines attention to detail with strong client-facing and interpersonal skills, and advanced French. Draws on
         a lifelong interest in how industries and cultural systems are structured.
       </p>
@@ -336,7 +357,7 @@
           <h3>Oxford Fashion Gala</h3>
           <span class="cv-dates">Oxford | 2023 - 2025</span>
         </div>
-        <p class="cv-role">Co-Creative Director & Co-Marketing Director</p>
+        <p class="cv-role">Co-Creative Director &amp; Co-Marketing Director</p>
         <ul>
           <li>Appointed to lead the end-to-end creative vision for Oxford's largest annual fashion event, producing a
             thematically unified show by directing concept development, casting direction, set design, and choreography
@@ -405,6 +426,6 @@
       <a href="index.html">← Back to the archive</a>
       <a href="mailto:zcbarakat@gmail.com">zcbarakat@gmail.com</a>
     </footer>
-  </div>
+  </main>
 </body>
 </html>

@@ -1,44 +1,59 @@
-# Zaira Christa Portfolio
+# The Archives by Zai
 
-A single-page portfolio website for Zaira Christa, a London-based artist, strategist, researcher, and designer working across brand strategy, cultural research, fashion direction, writing, and creative worlds.
+The public portfolio of Zaira Christa Barakat, a London-based strategist, cultural researcher, creative director, and designer. The site brings together selected brand, hospitality, fashion, and academic work in an editorial, research-led archive.
 
-The site is built as a static HTML/CSS/JavaScript project. It opens with an editorial hero, moves through profile and capability sections, indexes selected work, and uses an interactive slide-in project panel for brand, fashion, and research case studies.
+**Live site:** [zaichrista.github.io/The-Archives-By-Zai](https://zaichrista.github.io/The-Archives-By-Zai/)
 
-## Project Structure
+## Site map
 
-- `index.html` - main page structure, navigation, hero, bio, work index, research index, profile, and contact sections.
-- `style.css` - full visual system, responsive layout, typography, cursor, loader, project panel, and section styling.
-- `script.js` - custom cursor behavior, loading sequence, project-panel content, modal open/close logic, and definition tooltips.
-- `assets/` - logo, wordmark, favicon, and image assets used by the site.
+- `index.html` — portfolio homepage, profile, capabilities, selected work, research, and contact.
+- `works.html` — crawlable, text-first versions of every case study referenced by the portfolio.
+- `zc-studios.html` — interactive overview of ZC Studios and its cultural-strategy workflow.
+- `cv.html` — web CV with a downloadable PDF.
+- `assets/` — photography, project imagery, identity assets, favicon, and CV PDF.
 
-## How To Run
+## Technology
 
-Open `index.html` in a browser.
+The site is intentionally lightweight: semantic HTML, CSS, and vanilla JavaScript, with no framework or production build step. Google Fonts supplies the display, sans-serif, and monospace typefaces. GitHub Actions deploys the repository to GitHub Pages.
 
-Because this is a static site, no build step or local server is required.
+## Run locally
 
-## Editing Guide
+Serve the repository root with any static file server. For example:
 
-Edit the main page copy in `index.html`.
+```bash
+npx serve .
+```
 
-Update project titles, descriptions, questions, abstracts, investigation text, evidence slots, and learned notes in the `projects` object inside `script.js`.
+Then open the local URL printed in the terminal. A local server is recommended because it reproduces production URL and asset behaviour more accurately than opening an HTML file directly.
 
-Adjust colors, spacing, typography, responsive behavior, animation, and panel styling in `style.css`.
+## Content and design updates
 
-Replace or add visual assets in `assets/`, then update the matching image paths in `index.html` or CSS.
+- Edit homepage and profile copy in `index.html`.
+- Edit case-study content in the `projects` object in `script.js`, then regenerate or update the matching text-first entries in `works.html`.
+- Edit the portfolio visual system and responsive behaviour in `style.css`.
+- Edit the Studio experience in `zc-studios.html`, `zc-studios.css`, and `zc-studios.js`.
+- Edit the web CV in `cv.html`; replace `assets/Zaira-Christa-Barakat-CV.pdf` when the downloadable version changes.
 
-## Current Sections
+Project links use progressive enhancement: the homepage opens a JavaScript dialog, while each link retains a real `works.html#project-id` destination for visitors without JavaScript and for search engines. A homepage `data-project` value must therefore match both a key in `script.js` and the corresponding `id` in `works.html`.
 
-- Hero introduction with Zaira Christa logo and primary calls to view work or read the profile.
-- Short editorial bio with interactive definition terms.
-- Current capabilities across brand strategy, creative direction, and cultural theory.
-- Selected works grouped into brand strategy/research and creative direction/fashion.
-- Research and writing archive with request links for full pieces.
-- Full profile section describing academic, creative, and strategic practice.
-- Contact section with email, Instagram, and TikTok links.
+When adding images, use descriptive alternative text, optimise files before committing, and URL-encode spaces in paths referenced by HTML or JavaScript.
 
-## Notes
+## Quality checklist
 
-The project panel content is generated from JavaScript rather than written directly into the HTML. If a work item has a `data-project` attribute in `index.html`, it should match a key in the `projects` object in `script.js`.
+Before publishing:
 
-The site uses Google Fonts through an `@import` in `style.css`, so typography depends on an internet connection unless the fonts are self-hosted.
+1. Test the homepage, project dialogs, Studio interactions, CV download, email links, and all internal navigation.
+2. Check layouts at mobile, tablet, laptop, and wide-desktop widths.
+3. Navigate every interactive element by keyboard and verify visible focus states.
+4. Test with reduced-motion enabled and confirm that content remains available when JavaScript is disabled.
+5. Confirm that every local link and asset resolves, then update `sitemap.xml` dates for materially changed pages.
+
+## Deployment
+
+The workflow in `.github/workflows/pages.yml` publishes the repository root to GitHub Pages on pushes to `main`; it can also be run manually from GitHub Actions. The canonical production base URL is:
+
+```text
+https://zaichrista.github.io/The-Archives-By-Zai/
+```
+
+Keep the canonical URLs, Open Graph URLs, `robots.txt`, and `sitemap.xml` aligned with that address if the domain changes.
