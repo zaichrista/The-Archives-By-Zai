@@ -75,9 +75,10 @@
     h1 {
       font-family: "Cormorant Garamond", serif;
       font-weight: 600;
-      font-size: clamp(44px, 7vw, 72px);
+      font-size: min(72px, 7vw);
       line-height: .95;
       letter-spacing: -.02em;
+      white-space: nowrap;
     }
 
     .cv-tagline {
@@ -155,12 +156,18 @@
       color: #2b2824;
     }
 
-    .cv-entry li { margin-bottom: 8px; }
+    .cv-entry li {
+      margin-bottom: 8px;
+      text-align: justify;
+      text-justify: inter-word;
+    }
 
     .cv-profile p {
       font-size: 14px;
-      max-width: 720px;
+      max-width: none;
       margin-bottom: 14px;
+      text-align: justify;
+      text-justify: inter-word;
     }
 
     .cv-skills dt {
@@ -174,6 +181,8 @@
       color: #2b2824;
       margin-top: 4px;
       margin-left: 0;
+      text-align: justify;
+      text-justify: inter-word;
     }
 
     .cv-footer {
