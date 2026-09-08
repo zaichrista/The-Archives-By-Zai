@@ -98,7 +98,7 @@ const agents = [
 const phases = [
   {phase:"00", title:"Pre-Onboarding", agent:"Camille", output:"Pre-Onboarding Brief", happens:"Public intelligence scan before a client call.", matters:"Zaira enters the room with evidence, not vibes.", next:"Inès"},
   {phase:"01", title:"Research", agent:"Inès", output:"Research Report", happens:"Brand audit, customer language, competitors, friction, research gaps.", matters:"The entire engagement has an evidence base.", next:"Elian"},
-  {phase:"02", title:"Theory Calibration", agent:"Elian", output:"Theory Calibration + Activation Brief", happens:"The brand is diagnosed through cultural, affective, archival, and network logic.", matters:"This is the layer most studios skip.", next:"Valentina"},
+  {phase:"02", title:"Theory Calibration", agent:"Elian", output:"Theory Calibration + Activation Brief", happens:"The brand is diagnosed through cultural, affective, archival, and network logic.", matters:"Research is interpreted before a direction is chosen.", next:"Valentina"},
   {phase:"03", title:"Brand Strategy", agent:"Valentina", output:"Brand Strategy Platform", happens:"Positioning, proof, emotional territory, messaging, tone, and do/do-not logic.", matters:"The brand becomes strategically governed.", next:"Odette"},
   {phase:"04", title:"Visual Identity Direction", agent:"Odette", output:"Visual Identity Direction Brief", happens:"Designer-facing brief for colour, typography, imagery, layout, logo, references, and refusals.", matters:"Design begins from strategy, not taste alone.", next:"Lucia"},
   {phase:"05", title:"Customer Journey", agent:"Lucia", output:"Customer Journey Map", happens:"Discovery, first impression, consideration, conversion, return, and advocacy are mapped.", matters:"The brand becomes an experience.", next:"Sebastian"},
@@ -142,12 +142,12 @@ const maturity = {
   1:"LEVEL_1 // Raw founder instinct exists, but the brand cannot yet explain itself clearly.",
   2:"LEVEL_2 // Early signals and taste are visible, but execution is scattered.",
   3:"LEVEL_3 // Some coherence exists. The brand needs structure before scaling communication.",
-  4:"LEVEL_4 // Emerging brand with instinct but incoherent execution. Rhode, Skims, and Farm Girl sit here.",
+  4:"LEVEL_4 // Emerging brand with a recognisable idea but inconsistent execution across its touchpoints.",
   5:"LEVEL_5 // Stronger identity and audience pull, but the system still relies too much on intuition.",
-  6:"LEVEL_6 // Sophisticated brand with cultural depth. Aesop and Byredo sit here.",
+  6:"LEVEL_6 // A developed identity with cultural depth and a clearer relationship to its audience.",
   7:"LEVEL_7 // Clear world, strong codes, and repeatable audience meaning.",
   8:"LEVEL_8 // Highly mature brand with owned rituals, strong trust signals, and recognisable infrastructure.",
-  9:"LEVEL_9 // Near-institutional. Gail’s sits here: trusted, embedded, repeated, culturally present.",
+  9:"LEVEL_9 // An established presence with familiar rituals, consistent delivery and a sustained audience relationship.",
   10:"LEVEL_10 // Category-defining. The brand becomes a reference point competitors organise around."
 };
 const deliverables = [
