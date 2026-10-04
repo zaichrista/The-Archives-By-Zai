@@ -58,6 +58,7 @@ const html = `<!DOCTYPE html>
   <link rel="canonical" href="https://zaichrista.github.io/The-Archives-By-Zai/works.html">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="rhythm.css">
 </head>
 <body class="archive-page" id="top">
   <a class="skip-link" href="#main-content">Skip to main content</a>

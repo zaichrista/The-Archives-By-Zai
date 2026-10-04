@@ -3,6 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    // Force fresh loads and back/forward navigation to the top; skip when a deep link sets the anchor.
+    (function () {
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      var toTop = function () { if (!location.hash) window.scrollTo(0, 0); };
+      toTop();
+      window.addEventListener('pageshow', toTop);
+    })();
+  </script>
   <title>CV — Zaira Christa Barakat | Creative Direction &amp; Strategy</title>
   <meta name="description" content="Curriculum vitae of Zaira Christa Barakat: creative direction, campaign strategy, brand identity and cultural research." />
   <meta name="author" content="Zaira Christa" />
@@ -281,6 +290,7 @@
       .cv-skills dd { font-size: 7.5pt; line-height: 1.27; margin-top: .5mm; }
     }
   </style>
+  <link rel="stylesheet" href="rhythm.css">
 </head>
 
 <body>

@@ -3,9 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // Force fresh loads and back/forward navigation to the top; skip when a deep link sets the anchor.
+      (function () {
+        if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+        var toTop = function () { if (!location.hash) window.scrollTo(0, 0); };
+        toTop();
+        window.addEventListener('pageshow', toTop);
+      })();
+    </script>
     <meta name="description" content="ZC Studios is Zaira Christa's founder-led cultural strategy practice, turning research and instinct into coherent brand systems." />
     <meta name="author" content="Zaira Christa Barakat" />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="robots" content="noindex, nofollow" />
     <meta name="theme-color" content="#fff7f4" />
     <link rel="canonical" href="https://zaichrista.github.io/The-Archives-By-Zai/zc-studios.html" />
     <meta property="og:site_name" content="The Archives by Zai" />
@@ -22,7 +31,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="zc-studios.css" />
     <noscript><style>.zcs-loader { display: none; } body.zcs-loading { overflow: auto; }</style></noscript>
-  </head>
+    <link rel="stylesheet" href="rhythm.css">
+</head>
   <body class="zcs-loading">
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="noise" aria-hidden="true"></div>
@@ -299,5 +309,6 @@
     </div>
 
     <script src="zc-studios.js"></script>
-  </body>
+    <script src="scroll-pacing.js"></script>
+</body>
 </html>

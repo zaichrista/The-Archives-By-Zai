@@ -492,15 +492,6 @@ window.addEventListener("load", positionFooterLinks);
 window.addEventListener("resize", positionFooterLinks);
 document.fonts?.ready.then(positionFooterLinks);
 
-const revealEls = document.querySelectorAll(".section, .work-line, .research-grid article, .research-grid > a, .current-line");
-const io = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add("is-visible");
-  });
-}, { threshold: 0.08 });
-revealEls.forEach(el => io.observe(el));
-
-
 // Make every word in "The full current" turn gold on hover
 document.querySelectorAll(".bio-text p").forEach(p => {
   const walkerText = p.textContent;
@@ -610,34 +601,6 @@ document.addEventListener("click", closeDefinitionOnOutsideTap);
 window.addEventListener("scroll", hideDefinitionTooltip, { passive: true });
 window.addEventListener("resize", hideDefinitionTooltip);
 
-// Scroll-triggered bio transformation:
-// as the bio section passes, all text fades except the central question in gold.
-const cleanBioSection = document.querySelector(".clean-bio");
-const bioQuestionLock = document.querySelector(".bio-question-lock");
-function updateBioQuestionMode() {
-  if (!cleanBioSection) return;
-  const rect = cleanBioSection.getBoundingClientRect();
-  const viewport = window.innerHeight || document.documentElement.clientHeight;
-  const isSmallScreen = window.matchMedia("(max-width: 760px)").matches;
-
-  if (isSmallScreen && bioQuestionLock) {
-    const questionRect = bioQuestionLock.getBoundingClientRect();
-    const questionCenter = questionRect.top + questionRect.height / 2;
-    const shouldLockQuestion = questionCenter <= viewport * 0.50 && rect.bottom > viewport * 0.22;
-    cleanBioSection.classList.toggle("question-mode", shouldLockQuestion);
-    return;
-  }
-
-  // Turn on after the reader has moved through the bio, but before leaving it completely.
-  const shouldLockQuestion = rect.top < viewport * -0.10 && rect.bottom > viewport * 0.30;
-
-  cleanBioSection.classList.toggle("question-mode", shouldLockQuestion);
-}
-
-window.addEventListener("scroll", updateBioQuestionMode, { passive: true });
-window.addEventListener("resize", updateBioQuestionMode);
-updateBioQuestionMode();
-
 const footerWordmark = document.querySelector(".footer-wordmark");
 function fitFooterWordmark() {
   if (!footerWordmark) return;
@@ -675,64 +638,3 @@ function scheduleFooterWordmarkFit() {
 window.addEventListener("resize", scheduleFooterWordmarkFit);
 window.addEventListener("load", scheduleFooterWordmarkFit);
 fitFooterWordmark();
-
-
-// V16: section entrance choreography
-const currentSection = document.querySelector(".swiss-current");
-if (currentSection) {
-  const currentObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        currentSection.classList.add("current-visible");
-      }
-    });
-  }, { threshold: 0.22 });
-  currentObserver.observe(currentSection);
-}
-
-const workSection = document.querySelector(".work-index");
-if (workSection) {
-  workSection.classList.add("construct-ready");
-  const workObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !workSection.classList.contains("constructed")) {
-        workSection.classList.add("constructed");
-        workObserver.unobserve(workSection);
-      }
-    });
-  }, {
-    threshold: 0.14,
-    rootMargin: "0px 0px -12% 0px"
-  });
-  workObserver.observe(workSection);
-}
-
-
-// V18: repeatable reconstruct/deconstruct on scroll.
-// This overrides the earlier one-time behaviour without removing it.
-const currentSectionV18 = document.querySelector(".swiss-current");
-if (currentSectionV18) {
-  const currentRepeatObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      currentSectionV18.classList.toggle("current-visible", entry.isIntersecting);
-    });
-  }, {
-    threshold: 0.18,
-    rootMargin: "0px 0px -8% 0px"
-  });
-  currentRepeatObserver.observe(currentSectionV18);
-}
-
-const workSectionV18 = document.querySelector(".work-index");
-if (workSectionV18) {
-  workSectionV18.classList.add("construct-ready");
-  const workRepeatObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      workSectionV18.classList.toggle("constructed", entry.isIntersecting);
-    });
-  }, {
-    threshold: 0.12,
-    rootMargin: "0px 0px -10% 0px"
-  });
-  workRepeatObserver.observe(workSectionV18);
-}

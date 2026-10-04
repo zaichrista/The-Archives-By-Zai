@@ -3,6 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    // Force fresh loads and back/forward navigation to the top; skip when a deep link (e.g. #reach) sets the anchor.
+    (function () {
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      var toTop = function () { if (!location.hash) window.scrollTo(0, 0); };
+      toTop();
+      window.addEventListener('pageshow', toTop);
+    })();
+  </script>
   <title>Selected Works &amp; Research — The Archives by Zai</title>
   <meta name="description" content="Read the complete project archive of Zaira Christa Barakat, spanning brand strategy, cultural research, creative direction, fashion and academic writing.">
   <meta name="robots" content="index, follow, max-image-preview:large">
@@ -17,6 +26,7 @@
   <link rel="canonical" href="https://zaichrista.github.io/The-Archives-By-Zai/works.html">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="rhythm.css">
 </head>
 <body class="archive-page" id="top">
   <a class="skip-link" href="#main-content">Skip to main content</a>

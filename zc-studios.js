@@ -437,18 +437,7 @@ function wireMotion(){
   window.addEventListener("mousemove", e => { dot.style.left = `${e.clientX}px`; dot.style.top = `${e.clientY}px`; });
   document.addEventListener("mouseover", e => { if(e.target.closest("button,a,input")) document.body.classList.add("is-hovering"); });
   document.addEventListener("mouseout", e => { if(e.target.closest("button,a,input")) document.body.classList.remove("is-hovering"); });
-  const observer = new IntersectionObserver(entries => entries.forEach(en => en.target.classList.toggle("visible", en.isIntersecting)), {threshold:.12});
-  $$(".reveal").forEach(el => observer.observe(el));
-  const sectionObserver = new IntersectionObserver(entries => {
-    const visible = entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
-    if(visible) $("#activeSection").textContent = visible.target.dataset.label || "ZCS";
-  }, {threshold:[.22,.45,.7]});
-  $$(".section").forEach(s => sectionObserver.observe(s));
-  window.addEventListener("scroll", () => {
-    const max = document.documentElement.scrollHeight - innerHeight;
-    const pct = max > 0 ? (scrollY / max) * 100 : 0;
-    document.documentElement.style.setProperty("--section-progress", `${pct}%`);
-  }, {passive:true});
+
 }
 
 function wireDirectionAwareHeader(){

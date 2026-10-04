@@ -3,6 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    // Force fresh loads and back/forward navigation to the top; skip when a deep link sets the anchor.
+    (function () {
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      var toTop = function () { if (!location.hash) window.scrollTo(0, 0); };
+      toTop();
+      window.addEventListener('pageshow', toTop);
+    })();
+  </script>
   <title>Zaira Christa — Brand Strategy &amp; Cultural Research</title>
   <meta name="description" content="Zaira Christa is a London-based brand strategist and cultural researcher. Explore positioning, hospitality brand experience, ethnography and creative direction." />
   <meta name="author" content="Zaira Christa" />
@@ -77,6 +86,7 @@
       }
     }
   </script>
+  <link rel="stylesheet" href="rhythm.css">
 </head>
 
 <body>
@@ -85,9 +95,6 @@
   <div class="cursor-dot" aria-hidden="true"></div>
 
   <div class="grain" aria-hidden="true"></div>
-  <div class="orb orb--one" aria-hidden="true"></div>
-  <div class="orb orb--two" aria-hidden="true"></div>
-  <div class="orb orb--three" aria-hidden="true"></div>
 
   <div class="loader" id="loader" aria-hidden="true">
     <div class="loader-inner">
@@ -104,7 +111,7 @@
       <a href="#profile" data-cursor="read">Profile</a>
       <a href="#work" data-cursor="view">Works</a>
       <a href="#research" data-cursor="think">Research</a>
-      <a class="studio-nav-link" href="zc-studios.html" data-cursor="view">Studio</a>
+      <!-- hidden: <a class="studio-nav-link" href="zc-studios.html" data-cursor="view">Studio</a> -->
       <a href="cv.html" data-cursor="read">CV</a>
       <a href="#contact" data-cursor="write">Contact</a>
     </nav>
@@ -356,5 +363,6 @@
 
   <div class="definition-tooltip" id="definitionTooltip" role="tooltip" aria-hidden="true"></div>
   <script src="script.js"></script>
+  <script src="scroll-pacing.js"></script>
 </body>
 </html>

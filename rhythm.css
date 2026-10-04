@@ -1,0 +1,117 @@
+/* Shared editorial rhythm. Loaded after legacy styles to retire compressed
+   spacing overrides without disturbing the existing typography or palette. */
+:root {
+  --space-copy: clamp(1.5rem, 3svh, 2.5rem);
+  --space-block: clamp(3rem, 7svh, 6rem);
+  --space-chapter: clamp(5rem, 14svh, 12rem);
+  --space-section: clamp(8rem, 20svh, 18rem);
+  --space-row: clamp(3rem, 7svh, 6rem);
+}
+.section { padding-block: var(--space-section) !important; }
+.hero.section { min-height: 120svh !important; padding-top: max(140px, var(--space-section)) !important; }
+.hero .intro { margin-top: var(--space-block) !important; }
+.hero-actions { margin-top: var(--space-copy) !important; }
+.section-label, .kicker { margin-bottom: var(--space-copy) !important; }
+.section-head { margin-bottom: var(--space-block) !important; gap: var(--space-copy); }
+.clean-bio.section { min-height: 170svh !important; justify-content: flex-start; }
+.bio-pause { position: sticky; top: 18svh; }
+.clean-bio-text.definition-bio { max-width: 52ch !important; }
+.swiss-current { min-height: 125svh; }
+.current-line { padding-block: var(--space-row) !important; }
+.current-line p { max-width: 44ch; }
+.work-category + .work-category { margin-top: var(--space-chapter) !important; }
+.work-category > .section-label { margin-bottom: var(--space-block) !important; }
+.work-line { min-height: clamp(240px, 38svh, 440px); padding-block: var(--space-row) !important; }
+.work-line p { margin-top: var(--space-copy); max-width: 48ch; }
+.research { min-height: 130svh; }
+.research-grid > a, .research-grid article { min-height: 52svh; padding: var(--space-block) clamp(24px, 4vw, 64px) !important; }
+.research-grid h3 { margin-block: var(--space-block) var(--space-copy); }
+.research-grid p { max-width: 48ch; }
+.research-note { margin-top: var(--space-copy); }
+.bio-text { max-width: 52ch; }
+.bio-text p { margin-bottom: var(--space-block); }
+.bio-text p:last-child { margin-bottom: 0; }
+.contact.section { min-height: 110svh !important; row-gap: var(--space-block); }
+.contact-intro .ways-to-work { margin-top: var(--space-block); }
+.ways-to-work ul { gap: var(--space-copy); }
+.archive-intro { padding-block: var(--space-section) var(--space-block); min-height: 80svh; }
+.archive-intro > p:last-child { margin-top: var(--space-block); }
+.archive-nav { margin-bottom: var(--space-chapter); }
+.archive-nav a { padding-block: var(--space-copy); }
+.archive-project { padding-block: var(--space-section); }
+.archive-lead { margin-block: var(--space-block) var(--space-chapter); }
+.archive-project section { padding-block: var(--space-block); gap: var(--space-block); }
+.archive-project section > div, .archive-project section > p { max-width: 62ch; }
+.project-hero-grid { padding-bottom: var(--space-block); }
+.project-room .lead { margin-top: var(--space-block); max-width: 48ch; }
+.project-section { margin-top: var(--space-chapter); padding-top: var(--space-block); }
+.project-section .meta, .project-section h3 { margin-bottom: var(--space-copy); }
+.project-section p { max-width: 62ch; }
+.project-two-col { gap: var(--space-block); }
+.gallery-slots { gap: var(--space-block); margin-top: var(--space-block); }
+.project-room { padding-bottom: var(--space-chapter); }
+/* Studio shares the same rhythm; controls retain their compact internal layout. */
+body:has(.header-stack) .section { min-height: 120svh; }
+body:has(.header-stack) .hero { min-height: 130svh !important; }
+.copy-block > p, .section-head > p { max-width: 60ch; margin-top: var(--space-copy); margin-bottom: var(--space-copy); }
+.copy-block blockquote { margin-block: var(--space-block); }
+.control-stack { gap: var(--space-copy); }
+body:has(.header-stack) .section-head h2 { margin-bottom: var(--space-copy); }
+/* Motion is opt-in: content remains readable without JavaScript. */
+:where(.swiss-current .section-label, .swiss-current .current-line, .reveal) {
+  opacity: 1 !important; transform: none !important; filter: none !important;
+}
+.scroll-paced {
+  opacity: calc(.12 + var(--entrance, 1) * .88) !important;
+  transform: translateY(calc((1 - var(--entrance, 1)) * var(--travel, 34px))) rotateX(calc((1 - var(--entrance, 1)) * var(--tilt, 0deg))) !important;
+  filter: blur(calc((1 - var(--entrance, 1)) * var(--blur, 6px))) !important;
+  transition: background .3s ease, color .3s ease, padding .5s ease !important;
+}
+.work-line.scroll-paced { --travel: 90px; --tilt: 16deg; --blur: 10px; transform-origin: top center; clip-path: inset(0 calc((1 - var(--entrance, 1)) * 12%) 0 0); }
+.scroll-paced:focus-within, .scroll-paced:focus-visible { opacity: 1 !important; transform: none !important; filter: none !important; clip-path: none !important; }
+@media screen {
+  .cv-wrap { padding-block: var(--space-block) var(--space-chapter); }
+  .cv-wrap section { margin-top: var(--space-block); }
+  .cv-wrap h2 { margin-bottom: var(--space-copy); }
+  .cv-entry { margin-bottom: var(--space-block); }
+  .cv-entry ul { margin-top: var(--space-copy); }
+}
+@media (max-width: 760px) {
+  :root {
+    --space-copy: clamp(1.25rem, 3svh, 1.75rem);
+    --space-block: clamp(2.5rem, 6svh, 3.75rem);
+    --space-chapter: clamp(4rem, 10svh, 6rem);
+    --space-section: clamp(5rem, 12svh, 7rem);
+    --space-row: clamp(2rem, 5svh, 3rem);
+  }
+  .hero.section { min-height: 100svh !important; gap: var(--space-block) !important; }
+  .clean-bio.section { min-height: auto !important; }
+  .bio-pause { position: static; }
+  .swiss-current, .research, body:has(.header-stack) .section { min-height: auto; }
+  body:has(.header-stack) .hero { min-height: 100svh !important; }
+  .work-line { min-height: 220px; }
+  .research-grid > a, .research-grid article { min-height: 0; }
+  .contact.section { min-height: 90svh !important; }
+  .archive-intro { min-height: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  .scroll-paced { opacity: 1 !important; transform: none !important; filter: none !important; clip-path: none !important; }
+  .bio-pause { position: static; }
+  .clean-bio.section { min-height: auto !important; }
+}
+/* Match legacy selector specificity at responsive breakpoints. */
+.hero.section .intro { margin-top: var(--space-block) !important; }
+.clean-bio .section-label { margin-bottom: var(--space-copy) !important; }
+.work-index .work-category + .work-category { margin-top: var(--space-chapter) !important; }
+.project-room .project-section { margin-top: var(--space-chapter) !important; padding-top: var(--space-block) !important; }
+.project-room .lead { margin-block: var(--space-block) !important; }
+@media (max-width: 760px) {
+  .work-index .work-line { padding-block: var(--space-row) !important; min-height: 220px !important; }
+}
+.work-line.scroll-paced .work-thumb {
+  transform: translateX(calc((1 - var(--entrance, 1)) * 60px)) rotate(calc((1 - var(--entrance, 1)) * 3deg));
+}
+@media (prefers-reduced-motion: reduce) {
+  .work-line.scroll-paced .work-thumb { transform: none; }
+}
